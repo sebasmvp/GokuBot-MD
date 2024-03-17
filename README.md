@@ -85,4 +85,4 @@ ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 href="https://github.com/Jostin207"><img src="https://github.com/Jostin207.png" width="200" height="200" alt="Jostin"/></a>
 
 ## Colaboradores Del Bot  
-[![AzamiJs](https://github.com/AzamiJs.png?size=100)](https://github.com/AzamiJs) [![elrebelde21](https://github.com/elrebelde21.png?size=100)](https://github.com/elrebelde21) [![diegojadibot](https://github.com/diegojadibot.png?size=100)](https://github.com/diegojadibot)
+[![AzamiJs](https://github.com/AzamiJs.png?size=100)](https://github.com/AzamiJs) [![elrebelde21](https://github.com/elrebelde21.png?size=100)](https://github.com/elrebelde21) [![diegojadibot](https://github.com/diegojadibot.png?size=100)](https://github.com/diegojadibot) [![GataNina-Li](https://github.com/GataNina-Li.png?size=100)](https://github.com/GataNina-Li) [![BrunoSobrino](https://github.com/BrunoSobrino.png?size=100)](https://github.com/BrunoSobrino)
