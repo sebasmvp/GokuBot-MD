@@ -1,5 +1,5 @@
 
-> 🌹📍Versión Del Bot: 1.0
+> 🌹📍Versión Del Bot: 1.0 (beta)
 
 ## Goku : Bot  - MD 🌸
 <p align="center">
