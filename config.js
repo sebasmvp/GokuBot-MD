@@ -38,17 +38,17 @@ global.imagen5 = fs.readFileSync('./src/+18.jpg');
 global.imagen6 = fs.readFileSync('./Menu3.png');
 
 
-global.gp1 = '' //Grupo Oficial De GokuBot
+global.gp1 = 'https://chat.whatsapp.com/G9MpDVmJtbiIpItEZpg70s' //Grupo Oficial De GokuBot
 
 global.gp2 = '' 
 
 global.gp3 = '' 
 
-global.channel = '' //Canal Oficial
+global.channel = 'https://whatsapp.com/channel/0029VaRfhiH65yD3ch0g3X1n' //Canal Oficial
 
 global.channel2 = 'https://whatsapp.com/channel/0029VaQD7LAJP216tu9liI2A' //Canal Información
 
-global.yt = '' //Canal De Youtube
+global.yt = 'https://www.youtube.com/@Jostin-ofc' //Canal De Youtube
 
 global.md = 'https://github.com/Jostin207/GokuBot-MD-' //Github Oficial
 
@@ -77,7 +77,7 @@ global.tiempo = d.toLocaleString('en-US', {hour: 'numeric', minute: 'numeric', s
 global.wm2 = `${dia} ${fecha}\nGokuBot`;
 global.gt = 'GokuBot';
 global.mysticbot = 'GokuBot';
-global.mysticbot = 'https://github.com/Jostin207/GokuBot-MD-';
+global.mysticbot = 'https://github.com/Jostin207/GokuBot-MD';
 global.waitt = '*⏳ 𝐄𝐬𝐩𝐞𝐫𝐞 𝐔𝐧 𝐌𝐨𝐦𝐞𝐧𝐭𝐨...*';
 global.waittt = '*⏳ 𝐄𝐬𝐩𝐞𝐫𝐞 𝐔𝐧 𝐌𝐨𝐦𝐞𝐧𝐭𝐨 ...*';
 global.waitttt = '*⏳ 𝐄𝐬𝐩𝐞𝐫𝐞 𝐔𝐧 𝐌𝐨𝐦𝐞𝐧𝐭𝐨 ...*';
