@@ -50,7 +50,7 @@ global.channel2 = 'https://whatsapp.com/channel/0029VaQD7LAJP216tu9liI2A' //Cana
 
 global.yt = '' //Canal De Youtube
 
-global.md = 'https://github.com/Jostin207/GokuBot-MD' //Github Oficial
+global.md = 'https://github.com/Jostin207/GokuBot-MD-' //Github Oficial
 
 //global.luna = '😾 ¿𝗬𝗼 𝗤𝘂𝗲𝗲?'
 
