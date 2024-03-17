@@ -20,8 +20,8 @@ const handler = async function(m, {conn, text, usedPrefix, command}) {
   user.regTime = + new Date;
   user.registered = true;
   const sn = createHash('md5').update(m.sender).digest('hex');
-  const caption = `╭━━━ •🧸⸽⃕𝘛𝘶 𝘙𝘦𝘨𝘪𝘴𝘵𝘳𝘰🍁⃨፝⃕✰• ━━━
-┃ ${saludo}: ${name}
+  const caption = `╭━━━ • Registo 🧃• ━━━
+┃ *🚀Nombre:* ${name}
 ┃ *🧩Edad:* ${age} años
 ┃ *📍Numero De Serie:* 
 ┃ ${sn}
