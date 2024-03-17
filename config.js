@@ -37,20 +37,22 @@ global.imagen4 = fs.readFileSync('./Menu.png');
 global.imagen5 = fs.readFileSync('./src/+18.jpg');
 global.imagen6 = fs.readFileSync('./Menu3.png');
 
-//Grupos Ofc Y Perfiles
-global.gp1 = 'https://chat.whatsapp.com/CKqHvmFQDL1Kdj6TFHahUn' //Grupo Oficial De SakuraBot
 
-global.gp2 = 'https://chat.whatsapp.com/JNdlCEUKLqHAw87sOqfKmO' //CuriosityBot Y SakuraBot
+global.gp1 = '' //Grupo Oficial De GokuBot
 
-global.gp3 = 'https://chat.whatsapp.com/IstOAq2RnBx687WhQpOYK8' //NovaBot Y SakuraBot
+global.gp2 = '' 
 
-global.channel = 'https://whatsapp.com/channel/0029VaQD7LAJP216tu9liI2A' //Canal Oficial
+global.gp3 = '' 
 
-global.yt = 'https://www.youtube.com/@SakuraBotLite' //Canal De Youtube
+global.channel = '' //Canal Oficial
+
+global.channel2 = 'https://whatsapp.com/channel/0029VaQD7LAJP216tu9liI2A' //Canal Información
+
+global.yt = '' //Canal De Youtube
 
 global.md = 'https://github.com/Jostin207/GokuBot-MD' //Github Oficial
 
-global.fb = 'https://www.facebook.com/diegosaroficial?mibextid=ZbWKwL' //Facebook Del Propietario
+global.fb = '' //Facebook Oficial
 
 //global.luna = '😾 ¿𝗬𝗼 𝗤𝘂𝗲𝗲?'
 
