@@ -1,10 +1,10 @@
 {
-  "name": "SakuraBotLite-MD",
-  "website": "https://github.com/diegojadibot",
+  "name": "GokuBot-MD-",
+  "website": "https://github.com/Jostin207",
   "description": "Mejor Bot",
-  "repository": "https://github.com/diegojadibot/SakuraBotLite-MD",
-  "logo": "https://raw.githubusercontent.com/diegojadibot/SakuraBotLite-MD/master/src/pictures/heroku-icon.jpg",
-  "success_url": "https://github.com/diegojadibot/SakuraBotLite-MD",
+  "repository": "https://github.com/Jostin207/GokuBot-MD-",
+  "logo": "https://raw.githubusercontent.com/Jostin207/GokuBot-MD-/master/src/pictures/heroku-icon.jpg",
+  "success_url": "https://github.com/Jostin207/GokuBot-MD-",
   "keywords": [
     "nodejs",
     "heroku",
