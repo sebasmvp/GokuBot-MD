@@ -52,8 +52,6 @@ global.yt = '' //Canal De Youtube
 
 global.md = 'https://github.com/Jostin207/GokuBot-MD' //Github Oficial
 
-global.fb = '' //Facebook Oficial
-
 //global.luna = '😾 ¿𝗬𝗼 𝗤𝘂𝗲𝗲?'
 
 //global.sol = '😄 ¿𝗤𝘂𝗲 𝗬𝗼 𝗤𝘂𝗲?'
