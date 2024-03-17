@@ -20,7 +20,7 @@ if (command == 'database' || command == 'usuarios' || command == 'user') {
 let totalreg = Object.keys(global.db.data.users).length
 let rtotalreg = Object.values(global.db.data.users).filter(user => user.registered == true).length
 
-conn.reply(m.chat, `${so}
+conn.reply(m.chat, `${lusol}
 
 🗂️ *Tengo ${rtotalreg} Usuarios Registrados*
 
