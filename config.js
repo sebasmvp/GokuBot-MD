@@ -27,7 +27,7 @@ global.titulowm = '𝐆𝐨𝐤𝐮 - 𝐁𝐨𝐭';
 global.titulowm2 = `𝙹𝚘𝚜𝚝𝚒𝚗 𝙾𝚏𝚒𝚌𝚒𝚊𝚕`
 global.igfg = '𝐉𝐨𝐬𝐭𝐢𝐧';
 global.wait = '*⏳ 𝐄𝐬𝐩𝐞𝐫𝐞 𝐔𝐧 𝐌𝐨𝐦𝐞𝐧𝐭𝐨.....*';
-global.vs = '1.0';
+global.vs = '1.0 (beta)';
 
 //imagenes
 global.imagen1 = fs.readFileSync('./Menu2.jpg');
@@ -52,9 +52,9 @@ global.md = 'https://github.com/Jostin207/GokuBot-MD' //Github Oficial
 
 global.fb = 'https://www.facebook.com/diegosaroficial?mibextid=ZbWKwL' //Facebook Del Propietario
 
-//global.luna = '😾 𝗬𝗼 𝗤𝘂𝗲𝗲?'
+global.luna = '😾 𝗬𝗼 𝗤𝘂𝗲𝗲?'
 
-//global.sol = '😄 𝗤𝘂𝗲 𝗬𝗼 𝗤𝘂𝗲?'
+global.sol = '😄 𝗤𝘂𝗲 𝗬𝗼 𝗤𝘂𝗲?'
 
 //saludo user, buen dia
 var ase = new Date(); var hour = ase.getHours(); switch(hour){ case 0: hour = 'Linda Mañana'; break; case 1: hour = 'Linda Mañana'; break; case 2: hour = 'Linda Mañana'; break; case 3: hour = 'Linda Mañana'; break; case 4: hour = 'linda mañana'; break; case 5: hour = 'Linda Mañana'; break; case 6: hour = 'Linda Mañana'; break; case 7: hour = 'Linda Mañana'; break; case 8: hour = 'Linda Mañana'; break; case 9: hour = 'Linda Mañana'; break; case 10: hour = 'Lindo Dia'; break; case 11: hour = 'Lindo Dia'; break; case 12: hour = 'Lindo Dia'; break; case 13: hour = 'Lindo Dia'; break; case 14: hour = 'Linda Tarde'; break; case 15: hour = 'Linda Tarde'; break; case 16: hour = 'Linda Tarde'; break; case 17: hour = 'Linda Tarde'; break; case 18: hour = 'Linda Noche'; break; case 19: hour = 'Linda Noche'; break; case 20: hour = 'Linda Noche'; break; case 21: hour = 'Linda Noche'; break; case 22: hour = 'Linda Noche'; break; case 23: hour = 'Linda Noche'; break;}
