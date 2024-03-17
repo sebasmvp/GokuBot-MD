@@ -13,10 +13,10 @@ global.confirmCode = ""
 //no quites los numeros de los propietarios
 global.owner = [
  ['593939005387', '👑 𝗖𝗿𝗲𝗮𝗱𝗼𝗿 ⚡️', true],
- ['573218138672', '𝗢𝘄𝗻𝗲𝗿 📖', true]]
+ ['573012482597', '𝗢𝘄𝗻𝗲𝗿 📖', true]]
 
 global.suittag = ['593939005387'];
-global.prems = ['573218138672'];
+global.prems = ['573012482597'];
 
 //nombre del  bot
 global.packname = '𝙂𝙤𝙠𝙪𝘽𝙤𝙩-𝙈𝘿 💖🌻';
