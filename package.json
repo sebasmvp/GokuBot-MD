@@ -1,7 +1,7 @@
 {
-  "name": "SakuraBotLite-MD",
+  "name": "GokuBot-MD-",
   "version": "1.0.0",
-  "description": "Super Bot",
+  "description": "Super Bot De WhatsApp",
   "main": "index.js",
   "type": "module",
   "directories": {
@@ -18,16 +18,16 @@
     "eslint": "eslint .",
     "eslintfix": "eslint --fix ."
   },
-  "homepage": "https://github.com/diegojadibot/SakuraBotLite-MD",
+  "homepage": "https://github.com/Jostin207/GokuBot-MD-",
   "author": {
-    "name": "diegojadibot"
+    "name": "Jostin207"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/diegojadibot/SakuraBotLite-MD.git"
+    "url": "git+https://github.com/Jostin207/GokuBot-MD-.git"
   },
   "bugs": {
-    "url": "https://github.com/diegojadibot/SakuraBotLite-MD/issues"
+    "url": "https://github.com/Jostin207/GokuBot-MD-/issues"
   },
   "license": "GPL-3.0-or-later",
   "dependencies": {
