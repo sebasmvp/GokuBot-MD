@@ -1,6 +1,6 @@
 //comando de https://github.com/diegojadibot/SakuraBotLite-MD
 
-import speed from 'performance-now'
+/*import speed from 'performance-now'
 import { spawn, exec, execSync } from 'child_process'
 
 let handler = async (m, { conn }) => {
@@ -16,5 +16,5 @@ let handler = async (m, { conn }) => {
 handler.help = ['info']
 handler.tags = ['main']
 handler.command = ['saludo']
-handler.register = true
-export default handler
+//handler.register = true
+export default handler*/
