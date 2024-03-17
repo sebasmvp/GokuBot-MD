@@ -12,10 +12,10 @@ global.confirmCode = ""
 
 //no quites los numeros de los propietarios
 global.owner = [
- ['573012482694', '👑 𝗖𝗿𝗲𝗮𝗱𝗼𝗿 ⚡️', true],
+ ['593939005387', '👑 𝗖𝗿𝗲𝗮𝗱𝗼𝗿 ⚡️', true],
  ['573218138672', '𝗢𝘄𝗻𝗲𝗿 📖', true]]
 
-global.suittag = ['573012482694'];
+global.suittag = ['593939005387'];
 global.prems = ['573218138672'];
 
 //nombre del  bot
