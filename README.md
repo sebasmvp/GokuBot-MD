@@ -3,7 +3,7 @@
 
 ## Goku : Bot  - MD 🌸
 <p align="center">
-<img src="https://telegra.ph/file/b02bbca79774c02bda357.jpg" alt="Bot/Whatsapp" width="900"/>
+<img src="https://telegra.ph/file/72b5a2d1e72952ce14df9.png" alt="Bot/Whatsapp" width="900"/>
 </p>
 
 
