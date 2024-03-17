@@ -8,12 +8,12 @@
 
 
 - ### ©️ Configuracion
- Clonar Repo : GokuBot [Aqui.](https://github.com/Jostin/GokuBot-MD/fork)
+ Clonar Repo : GokuBot [Aqui.](https://github.com/Jostin/GokuBot-MD-/fork)
 
   
 - ### 🧸Instalar Por Render🧩
 
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://dashboard.render.com/blueprint/new?repo=https%3A%2F%2Fgithub.com%2Jostin207%2FGokuBot-MD) 
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://dashboard.render.com/blueprint/new?repo=https%3A%2F%2Fgithub.com%2Jostin207%2FGokuBot-MD-) 
 
 
 - #### Instalacion Por Termux Automatica🧸
@@ -25,7 +25,7 @@ termux-setup-storage
 ```
 
 ```bash
-apt update -y && yes | apt upgrade && pkg install -y bash wget mpv && wget -O - https://raw.githubusercontent.com/Jostin207/GokuBot-MD/master/goku.sh | bash
+apt update -y && yes | apt upgrade && pkg install -y bash wget mpv && wget -O - https://raw.githubusercontent.com/Jostin207/GokuBot-MD-/master/goku.sh | bash
 ```
 
 - #### Instalacion Por Termux Manual👨‍💻
@@ -44,7 +44,7 @@ pkg install -y git nodejs ffmpeg imagemagick && pkg install yarn
 ```
 
 ```bash
-git clone https://github.com/Jostin207/GokuBot-MD.git && cd GokuBot-MD
+git clone https://github.com/Jostin207/GokuBot-MD-.git && cd GokuBot-MD-
 ```
 
 ```bash
@@ -68,14 +68,14 @@ npm start
 ```bash
 ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 > cd 
-> cd GokuBot-MD
+> cd GokuBot-MD-
 > npm start
 ```
 
 - ### Obtener Otro Codigo Qr👨‍💻 
 ```bash
 > ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
-> cd GokuBot-MD
+> cd GokuBot-MD-
 > rm -rf sessions
 > npm start
 ```
