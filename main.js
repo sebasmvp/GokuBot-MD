@@ -108,7 +108,7 @@ loadChatgptDB();
 
 /* ------------------------------------------------*/
 
-global.authFile = `SakuraBotSession`;
+global.authFile = `sessions`;
 const {state, saveState, saveCreds} = await useMultiFileAuthState(global.authFile);
 const msgRetryCounterMap = (MessageRetryMap) => { };
 const msgRetryCounterCache = new NodeCache()
@@ -129,7 +129,7 @@ opcion = '1'
 if (!methodCodeQR && !methodCode && !fs.existsSync(`./${authFile}/creds.json`)) {
 do {
 let lineM = '⋯ ⋯ ⋯ ⋯ ⋯ ⋯ ⋯ ⋯ ⋯ ⋯ ⋯ 》'
-opcion = await question('[ 🍓 ] Seleccione una opción:\n1. Con código QR\n2. Con código de texto de 8 dígitos\n---> ')
+opcion = await question('[ 🌹 ] Seleccione una opción:\n1. Con código QR\n2. Con código de texto de 8 dígitos\n---> ')
 //if (fs.existsSync(`./${authFile}/creds.json`)) {
 //console.log(chalk.bold.redBright(`PRIMERO BORRE EL ARCHIVO ${chalk.bold.greenBright("creds.json")} QUE SE ENCUENTRA EN LA CARPETA ${chalk.bold.greenBright(authFile)} Y REINICIE.`))
 //process.exit()
@@ -142,7 +142,7 @@ const connectionOptions = {
 logger: pino({ level: 'silent' }),
 printQRInTerminal: opcion == '1' ? true : methodCodeQR ? true : false,
 mobile: MethodMobile, 
-browser: opcion == '1' ? ['SakuraBotLite-MD', 'Safari', '2.0.0'] : methodCodeQR ? ['SakuraBotLite-MD', 'Safari', '2.0.0'] : ['Ubuntu', 'Chrome', '110.0.5585.95'],
+browser: opcion == '1' ? ['GokuBot-MD', 'Safari', '2.0.0'] : methodCodeQR ? ['GokuBot-MD', 'Safari', '2.0.0'] : ['Ubuntu', 'Chrome', '110.0.5585.95'],
 auth: {
 creds: state.creds,
 keys: makeCacheableSignalKeyStore(state.keys, Pino({ level: "fatal" }).child({ level: "fatal" })),
@@ -278,7 +278,7 @@ console.log(chalk.bold.red(`[ 🍓 ] Algo salio mal durante la eliminación, arc
 }}
 
 function purgeOldFiles() {
-const directories = ['./SakuraBotSession/', './jadibts/']
+const directories = ['./sessions/', './jadibts/']
 const oneHourAgo = Date.now() - (60 * 60 * 1000)
 directories.forEach(dir => {
 readdirSync(dir, (err, files) => {
@@ -313,13 +313,11 @@ if (opcion == '1' || methodCodeQR) {
     console.log(chalk.yellow('[ 🦋 ] Escanea el código QR.'));
  }}
    if (connection == 'open') {
-console.log(chalk.yellowBright('\n╭━─━━─━━─━─≪  🚀  ≫─━─━━─━━─━╮\n│\n│Conectado Correctamente Al WhatsApp.\n│\n╰━─━━━─━━─━─≪ 🟢 ≫─━─━━─━━━─━╯\n'))
-//conn.fakeReply('573012482694@s.whatsapp.net', '😄', '0@s.whatsapp.net', '😸 Soy SakuraBot\nRecientemente Me E Conectado', '0@s.whatsapp.net')
- await conn.groupAcceptInvite('CKqHvmFQDL1Kdj6TFHahUn');
+console.log(chalk.yellowBright('\n╭━─━━─━━─━─≪  ⏳️  ≫─━─━━─━━─━╮\n│\n│Conectado Correctamente Al WhatsApp.\n│\n╰━─━━━─━━─━─≪ 🟢 ≫─━─━━─━━━─━╯\n')) 
    }
 let reason = new Boom(lastDisconnect?.error)?.output?.statusCode;
 if (reason == 405) {
-await fs.unlinkSync("./SakuraBotSession/" + "creds.json")
+await fs.unlinkSync("./sessions/" + "creds.json")
 console.log(chalk.bold.redBright(`[ ⚠ ] Conexión replazada, Por favor espere un momento me voy a reiniciar...\nSi aparecen error vuelve a iniciar con : npm start`)) 
 process.send('reset')}
 if (connection === 'close') {
