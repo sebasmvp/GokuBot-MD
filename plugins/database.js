@@ -32,6 +32,6 @@ handler.help = ['dash', 'dashboard', 'views', 'database', 'usuarios', 'user']
 handler.tags = ['info']
 handler.command = ['dashboard', 'dash', 'views', 'database', 'usuarios', 'user']
 
-handler.register = true
+/handler.register = true
 
 export default  handler
