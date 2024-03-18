@@ -941,10 +941,10 @@ export async function handler(chatUpdate) {
         if (!('sBye' in chat)) chat.sBye = '';
         if (!('sPromote' in chat)) chat.sPromote = '';
         if (!('sDemote' in chat)) chat.sDemote = '';
-        if (!('delete' in chat)) chat.antidelete = true;
+        if (!('delete' in chat)) chat.antidelete = false;
         if (!('modohorny' in chat)) chat.modohorny = false;
         if (!('autosticker' in chat)) chat.autosticker = false;
-        if (!('audios' in chat)) chat.audios = false;
+        if (!('audios' in chat)) chat.audios = true;
         if (!('antiLink' in chat)) chat.antiLink = true;
         if (!('antiLink2' in chat)) chat.antiLink2 = false;
         if (!('antiviewonce' in chat)) chat.antiviewonce = true;
@@ -962,15 +962,15 @@ export async function handler(chatUpdate) {
           isBanned: false,
           welcome: true,
           detect: true,
-          detect2: true,
+          detect2: false,
           sWelcome: '',
           sBye: '',
           sPromote: '',
           sDemote: '',
-          antidelete: true,
-          modohorny: true,
+          antidelete: false,
+          modohorny: false,
           autosticker: false,
-          audios: false,
+          audios: true,
           antiLink: true,
           antiLink2: false,
           antiviewonce: true,
@@ -989,26 +989,26 @@ export async function handler(chatUpdate) {
       if (typeof settings !== 'object') global.db.data.settings[this.user.jid] = {};
       if (settings) {
         if (!('self' in settings)) settings.self = false;
-        if (!('autoread' in settings)) settings.autoread = false;
+        if (!('autoread' in settings)) settings.autoread = true;
         if (!('autoread2' in settings)) settings.autoread2 = false;
         if (!('restrict' in settings)) settings.restrict = false;
         if (!('antiCall' in settings)) settings.antiCall = false;
         if (!('antiPrivate' in settings)) settings.antiPrivate = false;
         if (!('modejadibot' in settings)) settings.modejadibot = true;
-        if (!('antispam' in settings)) settings.antispam = true;
-        if (!('audios_bot' in settings)) settings.audios_bot = false;  
+        if (!('antispam' in settings)) settings.antispam = false;
+        if (!('audios_bot' in settings)) settings.audios_bot = true;  
         if (!('modoia' in settings)) settings.modoia = false;      
       } else {
         global.db.data.settings[this.user.jid] = {
           self: false,
-          autoread: false,
+          autoread: true,
           autoread2: false,
           restrict: false,
           antiCall: false,
           antiPrivate: false,
           modejadibot: true,
-          antispam: true,
-          audios_bot: false,
+          antispam: false,
+          audios_bot: true,
           modoia: false
         };
       }
