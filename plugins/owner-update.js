@@ -50,7 +50,7 @@ let handler = async (m, {conn, text}) => {
       await await await conn.reply(m.chat, stdout.toString(), m)
     }
   } catch {
-    var update = execSync("git remote set-url origin https://github.com/diegojadibot/SakuraBotLite-MD.git && git pull")
+    var update = execSync("git remote set-url origin https://github.com/Jostin207/GokuBot-MD-.git && git pull")
     await await await m.reply(update.toString())
   }
 };
