@@ -5,9 +5,9 @@ handler.customPrefix = /términos y condiciones y privacidad|terminosycondicione
 handler.command = new RegExp;
 export default handler;
 
-global.terminos = `𝑺𝑴𝑺 𝑫𝑬𝑳 𝑪𝑹𝑬𝑨𝑫𝑶𝑹✨
+global.terminos = `MENSAJE DEL CREADOR✨
 
-⚠️𝐀𝐃𝐕𝐄𝐑𝐓𝐄𝐍𝐂𝐈𝐀 𝐃𝐄𝐋 𝐂𝐑𝐄𝐀𝐃𝐎𝐑 (JOSTIN)⚠️
+⚠️ADVERTENCIA DEL CREADOR (JOSTIN)⚠️
 
 Jostin No Se Hace Responsable Del Mal Uso Del Bot O Subbot, Cada Persona Usa Su Bot A Su Manera. Jostin No Se Hace Cargo De Lo Que Pasara A Su Cuenta Si Usa Mal El Bot.
 
