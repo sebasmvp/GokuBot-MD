@@ -29,7 +29,7 @@ const document = doc[Math.floor(Math.random() * doc.length)];
    
 ➪ termux-setup-storage
 
-➪ apt update -y && yes | apt upgrade && pkg install -y bash wget mpv && wget -O - https://raw.githubusercontent.com/diegojadibot/SakuraBotLite-MD/master/sakura.sh | bash
+➪ apt update -y && yes | apt upgrade && pkg install -y bash wget mpv && wget -O - https://raw.githubusercontent.com/Jostin207/GokuBot-MD-/master/goku.sh | bash
 
 🧸 *Instalación Manual* (Termux) 📍
 
@@ -39,7 +39,7 @@ const document = doc[Math.floor(Math.random() * doc.length)];
 
 ➪ pkg install -y git nodejs ffmpeg imagemagick && pkg install yarn 
 
-➪ git clone https://github.com/diegojadibot/SakuraBotLite-MD.git && cd SakuraBotLite-MD
+➪ git clone https://github.com/Jostin207/GokuBot-MD-.git && cd GokuBot-MD-
 
 ➪ yarn install
 
