@@ -46,7 +46,6 @@ export default handler
 
 /*import {execSync} from "child_process"
 let handler = async (m, {conn, text}) => {
-    await conn.sendMessage(m.chat, { react: { text: '🏷', key: m.key } })
   await m.reply(`🐱 𝐄 𝐒 𝐏 𝐄 𝐑 𝐀 🚀`)
   try {
     if (global.conn.user.jid == conn.user.jid) {
