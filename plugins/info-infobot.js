@@ -21,7 +21,6 @@ const handler = async (m, { conn, usedPrefix }) => {
   const old = performance.now();
   const neww = performance.now();
   const speed = neww - old;
-    await conn.sendMessage(m.chat, { react: { text: '🥀', key: m.key } })
   const info = `
 
 ╭━━━━━━･❪ ❁ ❫ ･━━━━━━
@@ -50,7 +49,7 @@ const handler = async (m, { conn, usedPrefix }) => {
   const Message = {
     document: { url: `https://github.com/diegojadibot/SakuraBotLite-MD` },
     mimetype: `application/${document}`,
-    fileName: `「 GokuBot🦁 」`,
+    fileName: `Bot`,
     fileLength: 99999999999999,
     pageCount: 200,
     contextInfo: {
@@ -75,7 +74,7 @@ const handler = async (m, { conn, usedPrefix }) => {
 handler.help = ["infobot", "speed"];
 handler.tags = ["info", "tools"];
 handler.command = /^(ping|speed|infobot)$/i;
-handler.register = true
+//handler.register = true
 export default handler;
 
 function clockString(ms) {
