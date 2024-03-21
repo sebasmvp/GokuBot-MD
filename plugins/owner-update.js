@@ -1,5 +1,3 @@
-//creditos a diegojadibot
-
 import { execSync } from 'child_process'
 
 var handler = async (m, { conn, text }) => {
