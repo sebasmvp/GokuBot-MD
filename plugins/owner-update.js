@@ -1,7 +1,8 @@
+//creditos a diegojadibot
+
 import { execSync } from 'child_process'
 
 var handler = async (m, { conn, text }) => {
-await conn.sendMessage(m.chat, { react: { text: '🍭', key: m.key } })
 try {
 const stdout = execSync('git pull' + (m.fromMe && text ? ' ' + text : ''));
 let messager = stdout.toString()
@@ -40,6 +41,9 @@ handler.rowner = true
 
 export default handler
 
+
+//no quites los creditos
+
 /*import {execSync} from "child_process"
 let handler = async (m, {conn, text}) => {
     await conn.sendMessage(m.chat, { react: { text: '🏷', key: m.key } })
@@ -50,7 +54,7 @@ let handler = async (m, {conn, text}) => {
       await await await conn.reply(m.chat, stdout.toString(), m)
     }
   } catch {
-    var update = execSync("git remote set-url origin https://github.com/Jostin207/GokuBot-MD-.git && git pull")
+    var update = execSync("git remote set-url origin https://github.com/diegojadibot/SakuraBotLite-MD-.git && git pull")
     await await await m.reply(update.toString())
   }
 };
