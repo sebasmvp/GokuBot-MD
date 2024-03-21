@@ -25,7 +25,7 @@ const handler = async (m, { conn, usedPrefix }) => {
 
 ╭━━━━━━･❪ ❁ ❫ ･━━━━━━
 │➸ *⏰️Actividad*
-│➸ *${uptime}*
+│➸ *${muptime}*
 │
 │•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•
 │
