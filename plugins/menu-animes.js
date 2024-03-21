@@ -21,9 +21,6 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
     const taguser = '@' + m.sender.split('@s.whatsapp.net')[0];
     const doc = ['pdf', 'zip', 'vnd.openxmlformats-officedocument.presentationml.presentation', 'vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'vnd.openxmlformats-officedocument.wordprocessingml.document'];
 
- await conn.sendMessage(m.chat, { react: { text: '🍨', key: m.key } })
-
-
 const document = doc[Math.floor(Math.random() * doc.length)];
  const str = `╭━━━･❪ *MENU/ANIME* ❫ ･━━━╮
 ┣⟣❥🔮  _!sakurita_
@@ -83,7 +80,7 @@ const document = doc[Math.floor(Math.random() * doc.length)];
   }
 };
 handler.command = /^(animesmenu|menuanimes)$/i;
-handler.register = true
+//handler.register = true
 handler.exp = 50;
 handler.fail = null;
 export default handler;
