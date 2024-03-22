@@ -328,7 +328,7 @@ if (opcion == '1' || methodCodeQR) {
     console.log(chalk.yellow('[ 🦋 ] Escanea el código QR.'));
  }}
    if (connection == 'open') {
-console.log(chalk.purpleBright('\n╭━─━━─━━─━─≪  ⏳️  ≫─━─━━─━━─━╮\n│\n│Conectado Correctamente Al WhatsApp.\n│\n╰━─━━━─━━─━─≪ 🟢 ≫─━─━━─━━━─━╯\n')) 
+console.log(chalk.greenBright('\n╭━─━━─━━─━─≪  ⏳️  ≫─━─━━─━━─━╮\n│\n│Conectado Correctamente Al WhatsApp.\n│\n╰━─━━━─━━─━─≪ 🟢 ≫─━─━━─━━━─━╯\n')) 
    }
 let reason = new Boom(lastDisconnect?.error)?.output?.statusCode;
 if (reason == 405) {
