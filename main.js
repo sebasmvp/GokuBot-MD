@@ -128,8 +128,21 @@ opcion = '1'
 }
 if (!methodCodeQR && !methodCode && !fs.existsSync(`./${authFile}/creds.json`)) {
 do {
-let lineM = '⋯ ⋯ ⋯ ⋯ ⋯ ⋯ ⋯ ⋯ ⋯ ⋯ ⋯ 》'
-opcion = await question('[ 🌹 ] Seleccione una opción:\n1. Con código QR\n2. Con código de texto de 8 dígitos\n---> ')
+let lineM = '━━━━━━━━━━━━━━━━━━━━'
+opcion = await question(`╭${lineM}╮  
+┃ ${chalk.blueBright('╭━━━━━━━━━━━━━━━━━━━')}
+┃ ${chalk.blueBright('┃')} ${chalk.blue.bgBlue.bold.cyan('MÉTODO DE VINCULACIÓN')}
+┃ ${chalk.blueBright('╰━━━━━━━━━━━━━━━━━━━')}   
+┃ ${chalk.blueBright('╭━━━━━━━━━━━━━━━━━━━ ')}     
+┃ ${chalk.blueBright('┃')} ${chalk.green.bgMagenta.bold.yellow('¿CÓMO DESEA CONECTARSE?')}
+┃ ${chalk.blueBright('┃')} ${chalk.bold.redBright('»  Opción 1:')} ${chalk.greenBright('Código QR.')}
+┃ ${chalk.blueBright('┃')} ${chalk.bold.redBright('»  Opción 2:')} ${chalk.greenBright('Código de 8 digitos.')}
+┃ ${chalk.blueBright('╰━━━━━━━━━━━━━━━━━━━')}
+┃ ${chalk.blueBright('╭━━━━━━━━━━━━━━━━━━━ ')}     
+┃ ${chalk.blueBright('┃')} ${chalk.italic.magenta('Escriba sólo el número de')}
+┃ ${chalk.blueBright('┃')} ${chalk.italic.magenta('la opción para conectarse.')}
+┃ ${chalk.blueBright('╰━━━━━━━━━━━━━━━━━━━ ')} 
+╰${lineM}╯\n${chalk.bold.magentaBright('---> ')}`)
 //if (fs.existsSync(`./${authFile}/creds.json`)) {
 //console.log(chalk.bold.redBright(`PRIMERO BORRE EL ARCHIVO ${chalk.bold.greenBright("creds.json")} QUE SE ENCUENTRA EN LA CARPETA ${chalk.bold.greenBright(authFile)} Y REINICIE.`))
 //process.exit()
@@ -144,7 +157,7 @@ const connectionOptions = {
 logger: pino({ level: 'silent' }),
 printQRInTerminal: opcion == '1' ? true : methodCodeQR ? true : false,
 mobile: MethodMobile, 
-browser: opcion == '1' ? ['GokuBot-MD', 'Safari', '2.0.0'] : methodCodeQR ? ['GokuBot-MD', 'Safari', '2.0.0'] : ['Ubuntu', 'Chrome', '110.0.5585.95'],
+browser: opcion == '1' ? ['GokuBot-MD', 'Safari', '2.0.0'] : methodCodeQR ? ['GokuBot-MD', 'Safari', '2.0.0'] : ['GokuBot-MD', 'Safari', '2.0.0'],
 auth: {
 creds: state.creds,
 keys: makeCacheableSignalKeyStore(state.keys, Pino({ level: "fatal" }).child({ level: "fatal" })),
@@ -178,17 +191,17 @@ let numeroTelefono
 if (!!phoneNumber) {
 numeroTelefono = phoneNumber.replace(/[^0-9]/g, '')
 if (!Object.keys(PHONENUMBER_MCC).some(v => numeroTelefono.startsWith(v))) {
-console.log(chalk.bgBlack(chalk.bold.redBright("Comience con el código de país de su número de WhatsApp.\nEjemplo: +5219992095479\n")))
+console.log(chalk.bgBlack(chalk.bold.redBright("🟢 Comience con el código de país de su número de WhatsApp.\nEjemplo: +5219992095479\n")))
 process.exit(0)
 }} else {
 while (true) {
-numeroTelefono = await question(chalk.bgBlack(chalk.bold.yellowBright('Por favor, escriba su número de WhatsApp.\nEjemplo: +5219992095479\n')))
+numeroTelefono = await question(chalk.bgBlack(chalk.bold.yellowBright('🟢 Por favor, escriba su número de WhatsApp.\nEjemplo: +5219992095479\n')))
 numeroTelefono = numeroTelefono.replace(/[^0-9]/g, '')
 
 if (numeroTelefono.match(/^\d+$/) && Object.keys(PHONENUMBER_MCC).some(v => numeroTelefono.startsWith(v))) {
 break 
 } else {
-console.log(chalk.bgBlack(chalk.bold.redBright("Por favor, escriba su número de WhatsApp.\nEjemplo: +5219992095479.\n")))
+console.log(chalk.bgBlack(chalk.bold.redBright("🟢 Por favor, escriba su número de WhatsApp.\nEjemplo: +5219992095479.\n")))
 }}
 rl.close()  
 } 
@@ -196,8 +209,8 @@ rl.close()
         setTimeout(async () => {
             let codigo = await conn.requestPairingCode(numeroTelefono)
             codigo = codigo?.match(/.{1,4}/g)?.join("-") || codigo
-            console.log(chalk.yellow('[ 🍓 ] introduce el código de emparejamiento en WhatsApp.'));
-            console.log(chalk.black(chalk.bgGreen(`Su código de emparejamiento: `)), chalk.black(chalk.white(codigo)))
+            //console.log(chalk.yellow('[ 🍓 ] introduce el código de emparejamiento en WhatsApp.'));
+            console.log(chalk.black(chalk.bgGreen(`👑 CÓDIGO DE EMPAREJAMIENTO 👑 `)), chalk.black(chalk.white(codigo)))
         }, 3000)
 }}
 }
@@ -315,7 +328,7 @@ if (opcion == '1' || methodCodeQR) {
     console.log(chalk.yellow('[ 🦋 ] Escanea el código QR.'));
  }}
    if (connection == 'open') {
-console.log(chalk.yellowBright('\n╭━─━━─━━─━─≪  ⏳️  ≫─━─━━─━━─━╮\n│\n│Conectado Correctamente Al WhatsApp.\n│\n╰━─━━━─━━─━─≪ 🟢 ≫─━─━━─━━━─━╯\n')) 
+console.log(chalk.purpleBright('\n╭━─━━─━━─━─≪  ⏳️  ≫─━─━━─━━─━╮\n│\n│Conectado Correctamente Al WhatsApp.\n│\n╰━─━━━─━━─━─≪ 🟢 ≫─━─━━─━━━─━╯\n')) 
    }
 let reason = new Boom(lastDisconnect?.error)?.output?.statusCode;
 if (reason == 405) {
