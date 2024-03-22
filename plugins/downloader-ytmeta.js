@@ -19,11 +19,11 @@ const extract = (await ytdl.getBasicInfo(text)).videoDetails.title;
     genre: s.meta.category || "-",
     comment: {
       language: "spa",
-      text: '🤴🏻 Descarga por diegojadibot & GokuBot-MD 🤖',
+      text: '🤴🏻 Descarga por Jostin207 & GokuBot-MD 🤖',
     },
     unsynchronisedLyrics: {
       language: "spa",
-      text: '🤴🏻 Descarga por diegojadibot & GokuBot-MD 🤖',
+      text: '🤴🏻 Descarga por Jostin207 & GokuBot-MD 🤖',
     },
     image: {
       mime: "image/jpeg",
