@@ -11,7 +11,7 @@ const handler = async (m, { conn, usedPrefix }) => {
   const sessionPath = './SakuraBotSession/';
   try {
     if (!existsSync(sessionPath)) {
-      return await conn.sendMessage(m.chat, {text: '*📍 La Carpeta SakuraBotSession No Existe O Está Vacia.*'}, {quoted: m});
+      return await conn.sendMessage(m.chat, {text: '*📍 La Carpeta GokuBotSession No Existe O Está Vacia.*'}, {quoted: m});
     }
     const files = await fs.readdir(sessionPath);
     let filesDeleted = 0;
@@ -22,7 +22,7 @@ const handler = async (m, { conn, usedPrefix }) => {
       }
     }
     if (filesDeleted === 0) {
-      await conn.sendMessage(m.chat, {text: '*📍 No Se Encontro El Archivo Para Eliminar La Carpeta SakuraBotSession.*'}, {quoted: m});
+      await conn.sendMessage(m.chat, {text: '*📍 No Se Encontro El Archivo Para Eliminar La Carpeta GokuBotSession.*'}, {quoted: m});
     } else {
       await conn.sendMessage(m.chat, {text: `*🧸 Se Eliminaron ${filesDeleted} Archivos De Sesion, Excepto El Archivo creds.json.*`}, {quoted: m});
     }
