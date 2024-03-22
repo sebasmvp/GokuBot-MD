@@ -7,7 +7,7 @@ const handler = async function(m, {conn, text, usedPrefix, command}) {
   if (user.registered === true) throw `👊😆Hᴇʏ Yᴀ Esᴛᴀs Rᴇɢɪsᴛʀᴀᴅᴏ, Qᴜɪᴇʀᴇs Rᴇɢɪsᴛʀᴀᴛᴇ Dᴇ Nᴜᴇᴠᴏ?\n\n 📌Usᴇ Esᴛᴇ Cᴏᴍᴀɴᴅᴏ Pᴀʀᴀ Eʟɪᴍɪɴᴀʀ Sᴜ Rᴇɢɪsᴛʀᴏ\n*${usedPrefix}unreg* <Número de serie>`;
   if (!Reg.test(text)) throw `*⚠️ Mal Uso Del Comando*\n\n*🥀 Uso Del Comando:* 
 *${usedPrefix + command} nombre.edad*\n\n*📍Ejemplo:*
- ${usedPrefix + command} *${name2}.18*`;
+ ${usedPrefix + command} Jostin .18*`;
   let [_, name, splitter, age] = text.match(Reg);
   if (!name) throw '*🧸 Debes Poner El Nombre*';
   if (!age) throw '*📍 La Edad Es Necesaria Para El Registro*';
