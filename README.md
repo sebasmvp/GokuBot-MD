@@ -80,6 +80,14 @@ ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 > npm start
 ```
 
+- ### 📍Actualizar GokuBot 🟢
+> Note Comandos para actualizar GokuBot-MD- de forma automática
+```bash
+grep -q 'bash\|wget' <(dpkg -l) || apt install -y bash wget && wget -O - https://raw.githubusercontent.com/Jostin207/GokuBot-MD-/master/update.sh | bash
+```
+Para que no pierda su progreso en SakuraBot, estos comandos realizarán un respaldo de su `database.json` y se agregará a la versión más reciente.
+
+
 ### Editor Y Propietario Del Bot 
 <a
 href="https://github.com/Jostin207"><img src="https://github.com/Jostin207.png" width="200" height="200" alt="Jostin"/></a>
