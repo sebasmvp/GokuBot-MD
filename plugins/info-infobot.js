@@ -47,7 +47,7 @@ const handler = async (m, { conn, usedPrefix }) => {
   ];
   const document = doc[Math.floor(Math.random() * doc.length)];
   const Message = {
-    document: { url: `https://github.com/diegojadibot/SakuraBotLite-MD` },
+    document: { url: `https://github.com/Jostin207/GokuBot-MD-` },
     mimetype: `application/${document}`,
     fileName: `Bot`,
     fileLength: 99999999999999,
@@ -62,7 +62,7 @@ const handler = async (m, { conn, usedPrefix }) => {
         title: "Tᴜ Mᴇᴊᴏʀ Bᴏᴛ!",
         body: wm,
         thumbnail: imagen6,
-        sourceUrl: "https://atom.bio/sakuralite",
+        sourceUrl: "https://atom.bio/gokubot-md",
       },
     },
     caption: info,
