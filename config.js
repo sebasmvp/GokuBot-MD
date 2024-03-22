@@ -6,6 +6,7 @@ import cheerio from 'cheerio';
 import fetch from 'node-fetch';
 import axios from 'axios';
 import moment from 'moment-timezone';
+import { es } from "./lib/idiomas/total-idiomas.js"
 
 global.botnumber = ""
 global.confirmCode = ""
@@ -17,6 +18,8 @@ global.owner = [
 
 global.suittag = ['593939005387'];
 global.prems = ['573012482597'];
+
+global.lenguajeGB = es //idioma de gokubot
 
 //nombre del  bot
 global.packname = '𝙂𝙤𝙠𝙪𝘽𝙤𝙩-𝙈𝘿 💖🌻';
