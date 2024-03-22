@@ -398,7 +398,7 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
 ╭━━━━･❪ ᗪᗴՏᗩᖇᖇOᒪᒪᗩᗪOᖇ ❫ ･━━━━╮
 ┃💧 !menuowner
 ╰•°• ✾ •°••°• ✾ •°••°• ✾ •°•°••°• ✾ •°•`;
-   await conn.sendMessage(m.chat, {text: txt.trim(), mentions: [...txt.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), contextInfo: {forwardingScore: 9999999, isForwarded: true, mentionedJid: [...txt.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), "externalAdReply": {"showAdAttribution": true, "containsAutoReply": true, "renderLargerThumbnail": true, "title": '🌻  𝕲𝖔𝖐𝖚 - 𝕭𝖔𝖙  - 𝕸𝕯 🌹', "containsAutoReply": true, "mediaType": 1, "thumbnail": imagen5, "mediaUrl": [gp1,channel,channel2].getRandom(), "sourceUrl": [gp1,channel,channel2].getRandom()}}}, {quoted: fkon});
+   await conn.sendMessage(m.chat, {text: txt.trim(), mentions: [...txt.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), contextInfo: {forwardingScore: 9999999, isForwarded: true, mentionedJid: [...txt.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), "externalAdReply": {"showAdAttribution": true, "containsAutoReply": true, "renderLargerThumbnail": true, "title": '🌻  𝕲𝖔𝖐𝖚 - 𝕭𝖔𝖙  - 𝕸𝕯 🌹', "containsAutoReply": true, "mediaType": 1, "thumbnail": imagen5, "mediaUrl": gp1, "sourceUrl": gp1}}}, {quoted: fkon});
  // m.react('🧩');
   } catch {
     conn.reply(m.chat, '🧸 *Ocurrió Un Error*', m);
