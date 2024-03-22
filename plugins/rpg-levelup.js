@@ -32,7 +32,7 @@ const handler = async (m, {conn}) => {
 ┋➺ *${user.level}*
 ★━━━━━━✩━━━━━━★
 
-Mienstra Mas Uses *SakuraBotLite-MD* Tu Nivel Subirá Mas Rapido🥀📍
+Mienstra Mas Uses *GokuBot-MD* Tu Nivel Subirá Mas Rapido🥀📍
 `.trim();
     try {
       const img = await levelup(teks, user.level);
