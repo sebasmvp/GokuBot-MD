@@ -104,7 +104,7 @@ await conn.sendMessage(m.chat, {text: `╭̟̩̩̩̩̩̩̩̩̩̩̩̩̩̩̩̩̩̩
 ╭ - ̗̀↳ꕤ—— 𖤍 —— ꕤ╮
 ┃ *< *Bot ofc* />*
 ├┈・─・﹕₊˚ ✦・୨୧・
-┣ 𖤍 ${packname}${conn.user.jid == global.conn.user.jid ? '' : `\n║˚₊·˚₊· ͟͟͞͞➳* 𝐹𝐸𝑁𝐼𝑋-𝐵𝑂𝑇-𝐶𝐷 𝑆𝑈𝐵 𝐵𝑂𝑇 ⇢ *@${global.conn.user.jid.split`@`[0]}`}
+┣ 𖤍 ${packname}${conn.user.jid == global.conn.user.jid ? '' : `\n║˚₊·˚₊· ͟͟͞͞➳* GOKUBOT-SUBBOT ⇢ *@${global.conn.user.jid.split`@`[0]}`}
  𖤍
 ╰ - ̗̀↳ꕤ—— 𖤍 —— ꕤ╯
 
