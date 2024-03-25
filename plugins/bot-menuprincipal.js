@@ -3,7 +3,7 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
   if (usedPrefix == 'a' || usedPrefix == 'A') return;
   try {
     const pp = imagen4;
-    // let vn = './media/menu.mp3'
+    let vn = './media/UwU.mp3'
     const img = './Menu2.jpg';
     const d = new Date(new Date + 3600000);
     const locale = 'es';
