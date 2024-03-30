@@ -85,7 +85,7 @@ ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 ```bash
 grep -q 'bash\|wget' <(dpkg -l) || apt install -y bash wget && wget -O - https://raw.githubusercontent.com/Jostin207/GokuBot-MD-/master/update.sh | bash
 ```
-Para que no pierda su progreso en SakuraBot, estos comandos realizarán un respaldo de su `database.json` y se agregará a la versión más reciente.
+Para que no pierda su progreso en GokuBot, estos comandos realizarán un respaldo de su `database.json` y se agregará a la versión más reciente.
 
 
 ### Editor Y Propietario Del Bot 
@@ -93,4 +93,4 @@ Para que no pierda su progreso en SakuraBot, estos comandos realizarán un respa
 href="https://github.com/Jostin207"><img src="https://github.com/Jostin207.png" width="200" height="200" alt="Jostin"/></a>
 
 ## Colaboradores Del Bot  
-[![AzamiJs](https://github.com/AzamiJs.png?size=100)](https://github.com/AzamiJs) [![elrebelde21](https://github.com/elrebelde21.png?size=100)](https://github.com/elrebelde21) [![diegojadibot](https://github.com/diegojadibot.png?size=100)](https://github.com/diegojadibot) [![GataNina-Li](https://github.com/GataNina-Li.png?size=100)](https://github.com/GataNina-Li) [![BrunoSobrino](https://github.com/BrunoSobrino.png?size=100)](https://github.com/BrunoSobrino)
+[![Jostin207/Creator](https://github.com/Jostin207.png?size=100)](https://github.com/Jostin207) [![EnzoVaselevich]([https://github.com/EnzoVaselevich.png?size=100)](https://github.com/EnzoVaselevich) [![Ender-GB-Isis777]([https://github.com/Ender-GB-Isis777png?size=100)](https://github.com/Ender-GB-Isis777) [![Jxtxn17](https://github.com/Jxtxn17/Jxtxn17.png?size=100)](https://github.com/Jxtxn17/Jxtxn17) [![WOTCHITO](https://github.com/WOTCHITO.png?size=100)](https://github.com/WOTCHITO)
