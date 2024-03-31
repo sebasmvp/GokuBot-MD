@@ -1,3 +1,5 @@
+//Menu adaptado por Jostin
+//DEJAD DE ROBAR CODIGO.
 import fetch from 'node-fetch';
 const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, isPrems}) => {
   if (usedPrefix == 'a' || usedPrefix == 'A') return;
@@ -557,7 +559,7 @@ await conn.sendMessage(m.chat, {text: `╭̟̩̩̩̩̩̩̩̩̩̩̩̩̩̩̩̩̩̩
 ┣'pareja' ${pareja ? `\n*»* ${name} 💕 ${conn.getName(pareja)}` : `🛐 ${lenguajeGB['smsResultPareja']()}`}
 ╰ - ̗̀↳ꕤ—— 𖤍 —— ꕤ╯*/
 
-handler.command = /^(menu|menú|memu|memú|help|info|comandos|allmenu|2help|menu1.2|ayuda|commands|commandos|cmd)$/i;
+handler.command = /^(menu|menú|memu|memú|help|info|comandos|allmenu|2help|menu1.2|ayuda|menu.goku|commands|commandos|cmd)$/i;
 handler.exp = 50;
 handler.fail = null;
 export default handler;
