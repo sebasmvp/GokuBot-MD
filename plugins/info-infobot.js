@@ -21,6 +21,7 @@ const handler = async (m, { conn, usedPrefix }) => {
   const old = performance.now();
   const neww = performance.now();
   const speed = neww - old;
+    await conn.sendMessage(m.chat, { react: { text: '🥀', key: m.key } })
   const info = `
 
 ╭━━━━━━･❪ ❁ ❫ ･━━━━━━
@@ -36,7 +37,7 @@ const handler = async (m, { conn, usedPrefix }) => {
 │
 │•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•
 │
-│➸ GokuBot-MD 🧸📍
+│➸ *_GOKUBOT-MD_*🧸📍
 ╰━━━━━━･❪ ❁ ❫ ･━━━━━━❖`.trim();
   const doc = [
     "pdf",
@@ -49,7 +50,7 @@ const handler = async (m, { conn, usedPrefix }) => {
   const Message = {
     document: { url: `https://github.com/Jostin207/GokuBot-MD-` },
     mimetype: `application/${document}`,
-    fileName: `Bot`,
+    fileName: `Goku bot MD ✨️`,
     fileLength: 99999999999999,
     pageCount: 200,
     contextInfo: {
@@ -62,7 +63,7 @@ const handler = async (m, { conn, usedPrefix }) => {
         title: "Tᴜ Mᴇᴊᴏʀ Bᴏᴛ!",
         body: wm,
         thumbnail: imagen6,
-        sourceUrl: "https://atom.bio/gokubot-md",
+        sourceUrl: "https://atom.bio/gokubotmd",
       },
     },
     caption: info,
@@ -74,7 +75,7 @@ const handler = async (m, { conn, usedPrefix }) => {
 handler.help = ["infobot", "speed"];
 handler.tags = ["info", "tools"];
 handler.command = /^(ping|speed|infobot)$/i;
-//handler.register = true
+handler.register = true
 export default handler;
 
 function clockString(ms) {
