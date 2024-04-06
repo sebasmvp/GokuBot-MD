@@ -21,7 +21,7 @@ const handler = async (m, { conn, usedPrefix }) => {
   const old = performance.now();
   const neww = performance.now();
   const speed = neww - old;
-    await conn.sendMessage(m.chat, { react: { text: '🥀', key: m.key } })
+    //await conn.sendMessage(m.chat, { react: { text: '🥀', key: m.key } })
   const info = `
 
 ╭━━━━━━･❪ ❁ ❫ ･━━━━━━
@@ -50,8 +50,8 @@ const handler = async (m, { conn, usedPrefix }) => {
   const Message = {
     document: { url: `https://atom.bio/gokubotmd` },
     mimetype: `application/${document}`,
-    fileName: `Goku Bot 🌸`,
-    fileLength: 99999999999999,
+    fileName: `Goku Bot`,
+    fileLength: 0123,
     pageCount: 200,
     contextInfo: {
       forwardingScore: 200,
@@ -60,9 +60,9 @@ const handler = async (m, { conn, usedPrefix }) => {
         mediaUrl: "https://atom.bio/gokubotmd",
         mediaType: 2,
         previewType: "pdf",
-        title: "Tᴜ Mᴇᴊᴏʀ Bᴏᴛ!",
+        title: "Bot - Goku!",
         body: wm,
-        thumbnail: imagen4,
+        thumbnail: imagen1,
         sourceUrl: "https://atom.bio/gokubotmd",
       },
     },
