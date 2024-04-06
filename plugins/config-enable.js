@@ -1,5 +1,5 @@
 const handler = async (m, {conn, usedPrefix, command, args, isOwner, isAdmin, isROwner}) => {
-  const optionsFull = `╭✨️⸽⃕GokuBot-MD🍁⃨፝⃕✰
+  const optionsFull = `╭✨️⸽⃕SᴀᴋᴜʀᴀBᴏᴛLɪᴛᴇ-MD🍁⃨፝⃕✰
 ┣☆ ඬ⃟⚓️ !enable welcome
 ┣☆ ඬ⃟⚓️ !disable welcome
 ┣☆ ඬ⃟🌐 !enable public
@@ -30,6 +30,8 @@ const handler = async (m, {conn, usedPrefix, command, args, isOwner, isAdmin, is
 ┣☆ ඬ⃟🛡️ !disable antiviewonce
 ┣☆ ඬ⃟🛡️ !enable antitoxic
 ┣☆ ඬ⃟🛡️ !disable antitoxic
+┣☆ ඬ⃟🛡️ !enable reaction
+┣☆ ඬ⃟🛡️ !disable reaction
 ┣☆ ඬ⃟🛡️ !enable antitraba
 ┣☆ ඬ⃟🛡️ !disable antitraba
 ┣☆ ඬ⃟📡 !enable pconly
@@ -51,9 +53,9 @@ const handler = async (m, {conn, usedPrefix, command, args, isOwner, isAdmin, is
 ┣☆ ඬ⃟🌹 !enable modoia
 ┣☆ ඬ⃟🌹 !disable modoia
 ╰━━━━━━━✦✗✦━━━━━━━━
-𝘉𝘺: 𝘑𝘰𝘴𝘵𝘪𝘯✨`.trim();
+𝘉𝘺: 𝘋𝘪𝘦𝘨𝘰𝘖𝘧𝘪𝘤𝘪𝘢𝘭✨`.trim();
 
-    const isEnable = /true|enable|(turn)?on|1/i.test(command);
+            const isEnable = /true|enable|(turn)?on|1/i.test(command);
   const chat = global.db.data.chats[m.chat];
   const user = global.db.data.users[m.sender];
   const bot = global.db.data.settings[conn.user.jid] || {};
@@ -320,6 +322,14 @@ throw false
 }}
 chat.game = isEnable          
 break;
+case 'reaction': case 'reaccion': case 'emojis': case 'antiemojis': case 'reacciones': case 'reaciones':
+if (m.isGroup) {
+if (!(isAdmin || isOwner)) {
+global.dfail('admin', m, conn)
+throw false
+}}
+chat.reaction = isEnable          
+break;
     case 'antitraba':
       if (m.isGroup) {
         if (!(isAdmin || isROwner || isOwner)) {
@@ -351,9 +361,9 @@ break;
       if (!/[01]/.test(command)) return await conn.sendMessage(m.chat, {text: optionsFull}, {quoted: m});
       throw false;
   }
-   conn.sendMessage(m.chat, {text: `ꨄ︎ *✨ Tipo*: ${type}\nꨄ︎ *📍 Estado*: ${isEnable ? 'Activo ✅️' : 'Desactivo ❎️'}\nꨄ︎ *🧩 Para*: ${isAll ? '𝗚𝗼𝗸𝘂𝗕𝗼𝘁-𝙈𝘿 ' : isUser ? '' : 'Este Chat'}`}, {quoted: m});
+     conn.sendMessage(m.chat, {text: `ꨄ︎ *🧸 Tipo*: ${type}\nꨄ︎ *📍 Estado*: ${isEnable ? 'Activo ✅️' : 'Desactivo ❎️'}\nꨄ︎ *🧩 Para*: ${isAll ? '𝙎𝙖𝙠𝙪𝙧𝙖𝘽𝙤𝙩𝙇𝙞𝙩𝙚-𝙈𝘿 ' : isUser ? '' : 'Este Chat'}`}, {quoted: m});
 };
 handler.help = ['en', 'dis'].map((v) => v + 'able <option>');
 handler.tags = ['group', 'owner'];
-handler.command = /^((en|dis)able|(tru|fals)e|(turn)?[01])$/i;
+handler.command = /^((en|dis)able|(tru|fals)e|(turn)?o(n|ff)|[01])$/i;
 export default handler;
