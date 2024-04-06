@@ -1,6 +1,6 @@
 //comando de https://github.com/diegojadibot/SakuraBotLite-MD
 
-import speed from 'performance-now'
+/*import speed from 'performance-now'
 import { spawn, exec, execSync } from 'child_process'
 
 let handler = async (m, { conn }) => {
@@ -15,11 +15,11 @@ let handler = async (m, { conn }) => {
 }
 handler.help = ['ping']
 handler.tags = ['main']
-handler.command = ['velocidad']
+handler.command = ['velocidad', 'ping']
 handler.register = true
-export default handler
+export default handler*/
 
-/*import { cpus as _cpus, totalmem, freemem } from 'os'
+import { cpus as _cpus, totalmem, freemem } from 'os'
 import util from 'util'
 import { performance } from 'perf_hooks'
 import { sizeFormatter } from 'human-readable'
@@ -83,7 +83,7 @@ conn.sendButton(m.chat, infobt, fgig, null, [
 }
 handler.help = ['info']
 handler.tags = ['main']
-handler.command = ['calculo', 'Calculo', 'CALCULO']
-handler.register = true
+handler.command = ['infobot', 'pinģ', 'ping']
+//handler.register = true
 
-export default handler*/
+export default handler
