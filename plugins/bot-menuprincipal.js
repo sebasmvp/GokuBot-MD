@@ -135,8 +135,8 @@ await conn.sendMessage(m.chat, {text: `╭̟̩̩̩̩̩̩̩̩̩̩̩̩̩̩̩̩̩̩
 ├┈ ↷   Sᴇʀʙᴏᴛ
 ├• ✐; ₊˚✦୧︰ Jᴀᴅɪʙᴏᴛ .
 ├┈・──・──・﹕₊˚ ✦・୨୧・
-┣ ඬ⃟ 🌺 _${usedPrefix}serbot --code_
 ┣ ඬ⃟ 🌺 _${usedPrefix}serbot_
+┣ ඬ⃟ 🌺 _${usedPrefix}code_
 ┣ ඬ⃟ 🌺 _${usedPrefix}deletebot_
 ┣ ඬ⃟ 🌺 _${usedPrefix}token
 ┣ ඬ⃟ 🌺 _${usedPrefix}stop_
