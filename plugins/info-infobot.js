@@ -48,7 +48,7 @@ const handler = async (m, { conn, usedPrefix }) => {
   ];
   const document = doc[Math.floor(Math.random() * doc.length)];
   const Message = {
-    document: { url: `` },
+    document: { url: `https://atom.bio/gokubotmd` },
     mimetype: `application/${document}`,
     fileName: `Goku Bot`,
     fileLength: 0123,
@@ -57,13 +57,13 @@ const handler = async (m, { conn, usedPrefix }) => {
       forwardingScore: 200,
       isForwarded: true,
       externalAdReply: {
-        mediaUrl: "",
+        mediaUrl: "https://atom.bio/gokubotmd",
         mediaType: 2,
         previewType: "pdf",
         title: "Bot - Goku!",
         body: wm,
         thumbnail: imagen1,
-        sourceUrl: "",
+        sourceUrl: "https://atom.bio/gokubotmd",
       },
     },
     caption: info,
