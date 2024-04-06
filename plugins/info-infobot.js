@@ -37,7 +37,7 @@ const handler = async (m, { conn, usedPrefix }) => {
 │
 │•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•
 │
-│➸ *_GOKUBOT-MD_*🧸📍
+│➸ *GokuBot-MD* 🧸📍
 ╰━━━━━━･❪ ❁ ❫ ･━━━━━━❖`.trim();
   const doc = [
     "pdf",
@@ -48,21 +48,21 @@ const handler = async (m, { conn, usedPrefix }) => {
   ];
   const document = doc[Math.floor(Math.random() * doc.length)];
   const Message = {
-    document: { url: `https://github.com/Jostin207/GokuBot-MD-` },
+    document: { url: `https://atom.bio/gokubotmd` },
     mimetype: `application/${document}`,
-    fileName: `Goku bot MD ✨️`,
+    fileName: `Goku Bot 🌸`,
     fileLength: 99999999999999,
     pageCount: 200,
     contextInfo: {
       forwardingScore: 200,
       isForwarded: true,
       externalAdReply: {
-        mediaUrl: "https://github.com/Jostin207/GokuBot-MD-",
+        mediaUrl: "https://atom.bio/gokubotmd",
         mediaType: 2,
         previewType: "pdf",
         title: "Tᴜ Mᴇᴊᴏʀ Bᴏᴛ!",
         body: wm,
-        thumbnail: imagen6,
+        thumbnail: imagen4,
         sourceUrl: "https://atom.bio/gokubotmd",
       },
     },
@@ -75,7 +75,7 @@ const handler = async (m, { conn, usedPrefix }) => {
 handler.help = ["infobot", "speed"];
 handler.tags = ["info", "tools"];
 handler.command = /^(ping|speed|infobot)$/i;
-handler.register = true
+//handler.register = true
 export default handler;
 
 function clockString(ms) {
