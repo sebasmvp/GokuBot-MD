@@ -62,7 +62,7 @@ const handler = async (m, { conn, usedPrefix }) => {
         previewType: "pdf",
         title: "Bot - Goku!",
         body: wm,
-        thumbnail: imagen3,
+        thumbnail: imagen1,
         sourceUrl: "https://atom.bio/gokubotmd",
       },
     },
