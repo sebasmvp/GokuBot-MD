@@ -24,13 +24,13 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
   const { key } = await conn.sendMessage(m.chat, {text: `${wait}`}, {quoted: m})
 await conn.sendMessage(m.chat, {text: `.....․⁀⸱⁀⸱︵૰⳹․㊪․⳼૰︵⸱⁀⸱⁀․.....╮̟̩̩̩̩̩̩̩̩̩̩̩̩̩̩̩̩̩̩̩̩̩̩
       ┈┈┈┈┈⃐ᤢ࣪࣪ Cẚᵣgᵃₙdₒ┈⃐ᤢ࣪࣪┈┈┈┈   
- li.𒉡.𓂃.GOKUBOT-MD:.ᯤ̸ׄ↯ׄᤷ♡..ᴏғɪͦᴄᷫɪͨᴀʟ°.il
+ li.𒉡.𓂃.𝙶𝙾𝙺𝚄𝙱𝙾𝚃-𝙼𝙳:.ᯤ̸ׄ↯ׄᤷ♡..ᴏғɪͦᴄᷫɪͨᴀʟ°.il
       ▰▰²⁵ %
 ╰▭ׄ▭ׅ▭ׄ▭ׅ▭ׄ  ✿ໍ ▭ׅ▭ׄ▭ׅ▭ׄ▭ׅ╯
      `, edit: key})
  await conn.sendMessage(m.chat, {text: `.....․⁀⸱⁀⸱︵૰⳹․㊪․⳼૰︵⸱⁀⸱⁀․.....╮̟̩̩̩̩̩̩̩̩̩̩̩̩̩̩̩̩̩̩̩̩̩̩
       ┈┈┈┈┈⃐ᤢ࣪࣪ Cẚᵣgᵃₙdₒ┈⃐ᤢ࣪࣪┈┈┈┈   
- li.𒉡.𓂃.:.ᯤ̸ׄ↯ׄᤷ♡..ᴏғɪͦᴄᷫɪͨᴀʟ°.il
+ li.𒉡.𓂃.:.ᯤ̸ׄ↯ׄᤷ♡❉✭✰✷..ᴏғɪͦᴄᷫɪͨᴀʟ°.il
       ▰▰▰²⁰ %
 ╰▭ׄ▭ׅ▭ׄ▭ׅ▭ׄ  ✿ໍ ▭ׅ▭ׄ▭ׅ▭ׄ▭ׅ╯
      `, edit: key})
@@ -58,24 +58,24 @@ await conn.sendMessage(m.chat, {text: `╭̟̩̩̩̩̩̩̩̩̩̩̩̩̩̩̩̩̩̩
 『𖤍𝐄𝐱𝐢𝐭𝐨 𝐩𝐫𝐨𝐧𝐭𝐨 𝐭𝐞𝐧𝐝𝐫𝐚 𝐞𝐥 𝐦𝐞𝐧𝐮́𖤍』
 ╰▭ׄ▭ׅ▭ׄ▭ׅ▭ׄ  ✿ໍ ▭ׅ▭ׄ▭ׅ▭ׄ▭ׅ╯
      `, edit: key})
-    const str = `╭═══〘 ✯✯✯✯✯✯✯✯✯ 〙══╮
+    const str = `╭═══〘 ✰✰✰✰✰✰✰✰✰ 〙══╮
 ║    
-✧✈︎ ✞͙͙͙͙͙͙͙͙͙͙⏜❟︵ֹ̩̥̩̥̩̥̩̩̥⏜੭🏮୧ֹ⏜︵ֹ̩̥̩̥̩̥̩̥̩̥̩̥̩̥❟⏜፞✞͙͙͙͙͙͙͙͙͙͙. ║
-✧: ➪ *𝑯𝑶𝑳𝑨,  ${taguser}* gracias por su preferencia😊
+✧✈︎ ✞͙͙͙͙͙͙͙͙͙͙⏜❟︵ֹ̩̥̩̥̩̥̩̩̥⏜੭💖୧ֹ⏜︵ֹ̩̥̩̥̩̥̩̥̩̥̩̥̩̥❟⏜፞✞͙͙͙͙͙͙͙͙͙͙. ║
+✧: ➪ *𝑯𝑶𝑳𝑨,  ${taguser}* gracias por su preferencia hacia GokuBot-MD😊
 ╰──────────────✧ 🌹 •°•°
 
 
 ╭┈ ↷ 𝐇𝐎𝐑𝐀𝐑𝐈𝐎 
-• ✐; HORARIO-BOT.
+• ✐; ʜᴏʀᴀᴇɪᴏ-ʙᴏᴛ.
 ├┈・──・──・﹕₊˚ ✦・୨୧・
-✧: *Data:* ${date} 
-✧: *Actividad:* ${uptime}
-✧: *usuarios reg:* ${rtotalreg}
-✧: *Usuarios:* ${rtotal}
+✧: *𝙳𝙰𝚃𝙰:* ${date} 
+✧: *𝚃𝙸𝙴𝙼𝙿𝙾 𝙰𝙲𝚃𝙸𝚅𝙾:* ${uptime}
+✧: *𝚄𝚂𝚄𝙰𝚁𝙸𝙾𝚂 𝚁𝙴𝙶𝙸𝚂𝚃𝚁𝙰𝙳𝙾𝚂:* ${rtotalreg}
+✧: *𝚄𝚂𝚄𝙰𝚁𝙸𝙾𝚂:* ${rtotal}
 ╰──────────────✧ 🌹 •°•°
 
 ╭─╮︹︹︹⊹︹︹︹⊹︹︹︹
-│   *「 Info Usuario.*
+│   *「 𝙸𝙽𝙵𝙾 𝚄𝚂𝚄𝙰𝚁𝙸𝙾.*
 *︶︶♡꒷꒦︶꒦꒷♡꒷꒦︶꒦꒷♡︶︶*
 ✞͙͙͙͙͙͙͙͙͙͙⏜❟︵ֹ̩̥̩̥̩̥̩̩̥⏜੭🏮୧ֹ⏜︵ֹ̩̥̩̥̩̥̩̥̩̥̩̥̩̥❟⏜፞✞͙͙͙͙͙͙͙͙͙͙.
 ╭──╮ - ̗̀ °︹︹︹⊹︹︹︹° 
@@ -128,7 +128,7 @@ await conn.sendMessage(m.chat, {text: `╭̟̩̩̩̩̩̩̩̩̩̩̩̩̩̩̩̩̩̩
 ├┈ ↷ Uɴᴇ ᴜɴ ʙᴏᴛ
 ├• ✐; ₊˚✦୧︰A ᴛᴜ ɢʀᴜᴘᴏ  .
 ├┈・──・──・﹕₊˚ ✦・୨୧・
-┣ ඬ⃟ 🌹 _${usedPrefix}join *<enlace>
+┣ ඬ⃟ 🌹 _${usedPrefix}join *<enlace>_
 ╘━ꥇ۬⏝۬︶⊹̇︶ٜ⊹︶ׅ⊹ֺ︶߭⊹︶۬⊹︶ꥇ̇ꥈׄ̇⏝۬ꥇ
 
 ✞͙͙͙͙͙͙͙͙͙͙⏜❟︵ֹ̩̥̩̥̩̥̩̩̥⏜੭🏮୧ֹ⏜︵ֹ̩̥̩̥̩̥̩̥̩̥̩̥̩̥❟⏜፞✞͙͙͙͙͙͙͙͙͙͙.
@@ -214,7 +214,7 @@ await conn.sendMessage(m.chat, {text: `╭̟̩̩̩̩̩̩̩̩̩̩̩̩̩̩̩̩̩̩
 ├┈ ↷  Rᴇᴘᴏʀᴛᴀʀ
 ├• ✐; ₊˚✦୧︰ Eʀʀᴏʀᴇs .
 ├┈・──・──・﹕₊˚ ✦・୨୧・
-┣ ඬ⃟ 🌺 ${usedPrefix}reporte *<texto>*_
+┣ ඬ⃟ 🌺 _${usedPrefix}reporte *<texto>*_
 ╘━ꥇ۬⏝۬︶⊹̇︶ٜ⊹︶ׅ⊹ֺ︶߭⊹︶۬⊹︶ꥇ̇ꥈׄ̇⏝۬ꥇ
 
 ✞͙͙͙͙͙͙͙͙͙͙⏜❟︵ֹ̩̥̩̥̩̥̩̩̥⏜੭🏮୧ֹ⏜︵ֹ̩̥̩̥̩̥̩̥̩̥̩̥̩̥❟⏜፞✞͙͙͙͙͙͙͙͙͙͙.
@@ -327,7 +327,7 @@ await conn.sendMessage(m.chat, {text: `╭̟̩̩̩̩̩̩̩̩̩̩̩̩̩̩̩̩̩̩
 ╘━ꥇ۬⏝۬︶⊹̇︶ٜ⊹︶ׅ⊹ֺ︶߭⊹︶۬⊹︶ꥇ̇ꥈׄ̇⏝۬ꥇ
 
 ✞͙͙͙͙͙͙͙͙͙͙⏜❟︵ֹ̩̥̩̥̩̥̩̩̥⏜੭🏮୧ֹ⏜︵ֹ̩̥̩̥̩̥̩̥̩̥̩̥̩̥❟⏜፞✞͙͙͙͙͙͙͙͙͙͙.
-┃ *< ℝ𝔸ℕ𝔻𝕆𝕄 />*
+┃ *< ℝ𝔸ℕ𝔻𝕆𝕄 *
 ├┈・──・──・﹕₊˚ ✦・୨୧・
 ┣ ඬ⃟ 🕹️ _${usedPrefix}kpop *<blackpink _
 ┣ ඬ⃟ 🕹️ _${usedPrefix}cat_
@@ -445,9 +445,9 @@ await conn.sendMessage(m.chat, {text: `╭̟̩̩̩̩̩̩̩̩̩̩̩̩̩̩̩̩̩̩
 ┣ ඬ⃟ 🌺 _${usedPrefix}myns_
 ┣ ඬ⃟ 🌺 _${usedPrefix}perfil_
 ┣ ඬ⃟ 🌺 _${usedPrefix}work_
-┣ ඬ⃟ 🌺_${usedPrefix}minar_
-┣ ඬ⃟ 🌺_${usedPrefix}minar2_
-┣ ඬ⃟ 🌺_${usedPrefix}buy_
+┣ ඬ⃟ 🌺 _${usedPrefix}minar_
+┣ ඬ⃟ 🌺 _${usedPrefix}minar2_
+┣ ඬ⃟ 🌺 _${usedPrefix}buy_
 ┣ ඬ⃟ 🌺 _${usedPrefix}buyall_
 ┣ ඬ⃟ 🌺 _${usedPrefix}verificar_
 ┣ ඬ⃟ 🌺 _${usedPrefix}robar *<cantidad> <@tag>*_
