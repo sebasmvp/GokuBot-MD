@@ -44,13 +44,13 @@ global.imagen6 = fs.readFileSync('./Menu3.png');
 
 global.gp1 = 'https://chat.whatsapp.com/G9MpDVmJtbiIpItEZpg70s' //Grupo Oficial De GokuBot
 
-global.gp2 = '' 
+global.gp2 = 'https://chat.whatsapp.com/KQA5YEnMMhE9PQODSh6I7B' //Grupo Oficial De GokuBot 2
 
 global.gp3 = '' 
 
-global.channel = 'https://whatsapp.com/channel/0029VaRfhiH65yD3ch0g3X1n' //Canal Oficial
+global.channel = 'https://whatsapp.com/channel/0029VaJL0xn0LKZL7FtiRs1e' //Canal Oficial
 
-global.channel2 = 'https://whatsapp.com/channel/0029VaQD7LAJP216tu9liI2A' //Canal Información
+global.channel2 = '' //Canal Información Próximamente 
 
 global.yt = 'https://www.youtube.com/@Jostin-ofc' //Canal De Youtube
 
