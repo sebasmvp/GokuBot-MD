@@ -31,20 +31,20 @@ const document = doc[Math.floor(Math.random() * doc.length)];
 ╰◆━━━━━━◆❃◆━━━━━━◆
 
 *╭🧸⸽⃕𝗥𝗲𝗽𝗼𝘀𝗶𝘁𝗼𝗿𝗶𝗼𝘀 𝗚𝗶𝘁𝗵𝘂𝗯📍✰*
-┃✣➸ 𝖣𝗂𝖾𝗀𝗈:
+┃✣➸ Jostin207:
+┃ https://github.com/Jostin207
+┃
+┃✣➸ EnzoVaselevich:
+┃ https://github.com/EnzoVaselevich
+┃
+┃✣➸ Diego:
 ┃ https://github.com/diegojadibot
 ┃
-┃✣➸ 𝖠𝗓𝖺𝗆𝗂:
-┃ https://github.com/AzamiJs
-┃
-┃✣➸ 𝖬𝖺𝗋𝗂𝗈:
-┃ https://github.com/elrebelde2
-┃
-┃✣➸ 𝖦𝖺𝗍𝖺𝖣𝗂𝗈𝗌:
-┃ https://github.com/elrebelde21
+┃✣➸ TallyEnder:
+┃ https://github.com/Ender-GB-Isis777
 ┃ 
-┃✣➸ 𝖡𝗋𝗎𝗇𝗈𝖲𝗈𝖻𝗋𝗂𝗇𝗈:
-┃ https://github.com/BrunoSobrino
+┃✣➸ PROXIMO:
+┃ ..............................
 ╰◆━━━━━━◆❃◆━━━━━━◆`.trim();     if (m.isGroup) { 
  // await conn.sendFile(m.chat, vn, 'menu.mp3', null, m, true, { type: 'audioMessage', ptt: true})
       const fkontak2 = {'key': {'participants': '0@s.whatsapp.net', 'remoteJid': 'status@broadcast', 'fromMe': false, 'id': 'Halo'}, 'message': {'contactMessage': {'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`}}, 'participant': '0@s.whatsapp.net'};
