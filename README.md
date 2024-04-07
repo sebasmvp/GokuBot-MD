@@ -95,6 +95,6 @@ href="https://github.com/Jostin207"><img src="https://github.com/Jostin207.png" 
 ## Colaboradores Del Bot  
 [![Jostin207](https://github.com/Jostin207.png?size=100)](https://github.com/Jostin207) 
 [![Ender-GB-Isis77]
-(https:/)github.com/Ender-GB-Isis777.png?
+(https://github.com/Ender-GB-Isis777.png?
 size=100)](https://hithub.com/Ender-GB-Isis77)
 [![Diego](https://github.com/diegojadibot.png?size=100)](https://github.com/diegojadibot) [![Alexis](https://github.com/AzamiJs.png?size=100)](https://github.com/AzamiJs) [![Mario](https://github.com/elrebelde21.png?size=100)](https://github.com/elrebelde21) [![Eder](https://github.com/WOTCHITO.png?size=100)](https://github.com/WOTCHITO)
