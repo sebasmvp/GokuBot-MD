@@ -45,7 +45,21 @@ const document = doc[Math.floor(Math.random() * doc.length)];
 ┃ 
 ┃✣➸ PROXIMO:
 ┃ ..............................
-╰◆━━━━━━◆❃◆━━━━━━◆`.trim();     if (m.isGroup) { 
+╰◆━━━━━━◆❃◆━━━━━━◆
+╭🧸⸽⃕𝗡𝘂𝗺𝗲𝗿𝗼𝘀 - 𝗖𝗿𝗲𝗮𝗱𝗼𝗿𝗲𝘀📍✰ 
+┋➸ Jostin: 
+┋+593 939 005 387 
+┋
+┋➸ Diego:
+┋+57 301 2482597
+┋
+┋➸ Enzito: 
+┋+54 9 11 3018-2250
+┋
+┋➸ TallyEnder: 
+┋+505 5812 4470
+┋
+╰◈ ━━━━━━━ ⸙ ━━━━━━━`.trim();     if (m.isGroup) { 
  // await conn.sendFile(m.chat, vn, 'menu.mp3', null, m, true, { type: 'audioMessage', ptt: true})
       const fkontak2 = {'key': {'participants': '0@s.whatsapp.net', 'remoteJid': 'status@broadcast', 'fromMe': false, 'id': 'Halo'}, 'message': {'contactMessage': {'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`}}, 'participant': '0@s.whatsapp.net'};
       conn.sendMessage(m.chat, {image: pp, caption: str.trim(), mentions: [...str.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net')}, {quoted: m});
