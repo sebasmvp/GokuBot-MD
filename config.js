@@ -53,7 +53,7 @@ global.channel2 = '' //Canal Información Próximamente
 
 global.yt = 'https://www.youtube.com/@Jostin-ofc' //Canal De Youtube
 
-global.md = 'https://github.com/Jostin207/GokuBot-MD-' //Github Oficial
+global.md = 'https://github.com/Jostin207' //Github Oficial
 
 //global.luna = '😾 ¿𝗬𝗼 𝗤𝘂𝗲𝗲?'
 
@@ -80,7 +80,7 @@ global.tiempo = d.toLocaleString('en-US', {hour: 'numeric', minute: 'numeric', s
 global.wm2 = `${dia} ${fecha}\nGokuBot`;
 global.gt = 'GokuBot';
 global.mysticbot = 'GokuBot';
-global.mysticbot = 'https://github.com/Jostin207/GokuBot-MD-';
+global.mysticbot = 'https://github.com/Jostin207';
 global.waitt = '*⏳ 𝐄𝐬𝐩𝐞𝐫𝐞 𝐔𝐧 𝐌𝐨𝐦𝐞𝐧𝐭𝐨...*';
 global.waittt = '*⏳ 𝐄𝐬𝐩𝐞𝐫𝐞 𝐔𝐧 𝐌𝐨𝐦𝐞𝐧𝐭𝐨 ...*';
 global.waitttt = '*⏳ 𝐄𝐬𝐩𝐞𝐫𝐞 𝐔𝐧 𝐌𝐨𝐦𝐞𝐧𝐭𝐨 ...*';
