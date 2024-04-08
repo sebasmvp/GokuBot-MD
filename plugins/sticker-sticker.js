@@ -10,10 +10,10 @@ try {
 let q = m.quoted ? m.quoted : m
 let mime = (q.msg || q).mimetype || q.mediaType || ''
 if (/webp|image|video/g.test(mime)) {
-if (/video/g.test(mime)) if ((q.msg || q).seconds > 8) return m.reply(`*EL VIDEO NO PUEDE DURA MAS DE 7 SEGUNDOS*`)
+if (/video/g.test(mime)) if ((q.msg || q).seconds > 8) return m.reply(`*EL VIDEO NO PUEDE DURAR MAS DE 7 SEGUNDOS*`)
 let img = await q.download?.()
 
-if (!img) throw `⚠️ _La Conversión Ha Fallado, Intenta Enviar Primero  Una Imagen O Un Video Y Luego Responde Con El Comando._`
+if (!img) throw `❌️ *_La Conversión* Ha Fallado, *Intenta Enviar* *Primero*  *Una Imagen O Un Video Y Luego Responde Con El Comando._*`
 
 let out
 try {
@@ -40,7 +40,7 @@ if (!stiker) stiker = e
 } finally {
 if (stiker) conn.sendFile(m.chat, stiker, 'sticker.webp', '',m, true, { contextInfo: { 'forwardingScore': 200, 'isForwarded': false, externalAdReply:{ showAdAttribution: false, title: wm, body: ``, mediaType: 2, sourceUrl: [gp1, channel, md, channel2].getRandom(), thumbnail: imagen3}}}, { quoted: m })
 
-else throw `⚠️ _La Conversión Ha Fallado, Intenta Enviar Primero  Una Imagen O Un Video Y Luego Responde Con El Comando._`
+else throw `❌️ *_La Conversión* Ha Fallado, *Intenta Enviar* *Primero*  *Una Imagen O Un Video Y Luego Responde Con El Comando._*`
 
 }}
 handler.help = ['stiker (caption|reply media)', 'stiker <url>', 'stikergif (caption|reply media)', 'stikergif <url>']
