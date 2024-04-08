@@ -13,7 +13,7 @@ if (/webp|image|video/g.test(mime)) {
 if (/video/g.test(mime)) if ((q.msg || q).seconds > 8) return m.reply(`*EL VIDEO NO PUEDE DURAR MAS DE 7 SEGUNDOS*`)
 let img = await q.download?.()
 
-if (!img) throw `❌️ *_La Conversión* Ha Fallado, *Intenta Enviar* *Primero*  *Una Imagen O Un Video Y Luego Responde Con El Comando._*`
+if (!img) throw `❌️ *_ʅα ƈσиνєɾѕισи_* *_нα ϝαʅʅαԃσ_ _ιɳƚҽɳƚα ҽɳʋιαr_* *_ρɾιмєɾσ_*  *_υɳα_ _ιмαgєи σ ʋιԃҽσ у ℓυєɠσ_ _ɾҽʂρσиԃҽ ¢σи ҽʅ_ _ƈσɱαɳԃσ_* .s`
 
 let out
 try {
@@ -40,7 +40,7 @@ if (!stiker) stiker = e
 } finally {
 if (stiker) conn.sendFile(m.chat, stiker, 'sticker.webp', '',m, true, { contextInfo: { 'forwardingScore': 200, 'isForwarded': false, externalAdReply:{ showAdAttribution: false, title: wm, body: ``, mediaType: 2, sourceUrl: [gp1, channel, md, channel2].getRandom(), thumbnail: imagen3}}}, { quoted: m })
 
-else throw `❌️ *_La Conversión* Ha Fallado, *Intenta Enviar* *Primero*  *Una Imagen O Un Video Y Luego Responde Con El Comando._*`
+else throw `❌️ *_ʅα ƈσиνєɾѕισи_* *_нα ϝαʅʅαԃσ_ _ιɳƚҽɳƚα ҽɳʋιαr_* *_ρɾιмєɾσ_*  *_υɳα_ _ιмαgєи σ ʋιԃҽσ у ℓυєɠσ_ _ɾҽʂρσиԃҽ ¢σи ҽʅ_ _ƈσɱαɳԃσ_* .s`
 
 }}
 handler.help = ['stiker (caption|reply media)', 'stiker <url>', 'stikergif (caption|reply media)', 'stikergif <url>']
