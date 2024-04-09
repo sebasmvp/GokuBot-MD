@@ -10,18 +10,13 @@ import moment from 'moment-timezone';
 global.botnumber = ""
 global.confirmCode = ""
 
-//no quites los numeros de los propietarios
 global.owner = [
- ['593939005387', '👑 𝗖𝗿𝗲𝗮𝗱𝗼𝗿 ✨️', true],
- ['573012482597', '𝗢𝘄𝗻𝗲𝗿 🐈🌻', true],
- ['5491168758497', '𝗘𝗻𝘇𝗼', false],
- ['50558124470', '🌹𝗧𝗮𝗹𝗹𝘆 𝗘𝗻𝗱𝗲𝗿🌹', true],
- ['595981477001', '𝗔𝗹𝗲𝘅𝗣𝗶𝘅𝗲𝗹𝗫𝗗', false]]
+['593939005387', '👑 𝗖𝗿𝗲𝗮𝗱𝗼𝗿 ✨️', true],
+['573012482597', '𝗢𝘄𝗻𝗲𝗿 🐈🌻', true]]
 
 global.suittag = ['593939005387'];
 global.prems = ['593939005387'];
 
-//nombre del  bot
 global.packname = '𝙂𝙤𝙠𝙪𝘽𝙤𝙩-𝙈𝘿 💖🌻';
 global.author = '𝗝𝗼𝘀𝘁𝗶𝗻 🥀';
 global.wm = 'Goku : Bot 🌹';
