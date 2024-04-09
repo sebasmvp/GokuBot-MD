@@ -1,3 +1,5 @@
+//Creditos: https://github.com/diegojadibot/SakuraBotLite-MD
+
 import fetch from 'node-fetch';
 
 const handler = async (m, { conn, args }) => {
