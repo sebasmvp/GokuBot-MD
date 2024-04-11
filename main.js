@@ -81,7 +81,7 @@ global.loadDatabase = async function loadDatabase() {
 };
 loadDatabase();
 
-/* Creditos a oficial (https://wa.me/573013114854) */
+/* Creditos a Otosaka (https://wa.me/51993966345) */
 
 global.chatgpt = new Low(new JSONFile(path.join(__dirname, '/db/chatgpt.json')));
 global.loadChatgptDB = async function loadChatgptDB() {
@@ -115,68 +115,109 @@ const msgRetryCounterCache = new NodeCache()
 const {version} = await fetchLatestBaileysVersion();
 let phoneNumber = global.botnumber
 
-const pairingCode = !!phoneNumber || process.argv.includes("--pairing-code")
-const useMobile = process.argv.includes("--mobile")
+const methodCodeQR = process.argv.includes("qr")
+const methodCode = !!phoneNumber || process.argv.includes("code")
+const MethodMobile = process.argv.includes("mobile")
 const rl = readline.createInterface({ input: process.stdin, output: process.stdout })
 const question = (texto) => new Promise((resolver) => rl.question(texto, resolver))
 
+//Código adaptado para la compatibilidad de ser bot con el código de 8 digitos. Hecho por: https://github.com/GataNina-Li
+let opcion
+if (methodCodeQR) {
+opcion = '1'
+}
+if (!methodCodeQR && !methodCode && !fs.existsSync(`./${authFile}/creds.json`)) {
+do {
+let lineM = '━━━━━━━━━━━━━━━━━━━━'
+opcion = await question(`╭${lineM}╮  
+┃ ${chalk.greenBright('╭━━━━━━━━━━━━━━━━━━━')}
+┃ ${chalk.greenBright('┃')} ${chalk.blue.bgBlue.bold.cyan('MÉTODO DE VINCULACIÓN')}
+┃ ${chalk.greenBright('╰━━━━━━━━━━━━━━━━━━━')}   
+┃ ${chalk.greenBright('╭━━━━━━━━━━━━━━━━━━━ ')}     
+┃ ${chalk.greenBright('┃')} ${chalk.blue.bgMagenta.bold.yellow('¿CÓMO DESEA CONECTARSE?')}
+┃ ${chalk.greenBright('┃')} ${chalk.bold.redBright('»  Opción 1:')} ${chalk.yellowBright('Código QR.')}
+┃ ${chalk.greenBright('┃')} ${chalk.bold.redBright('»  Opción 2:')} ${chalk.yellowBright('Código de 8 digitos.')}
+┃ ${chalk.greenBright('╰━━━━━━━━━━━━━━━━━━━')}
+┃ ${chalk.greenBright('╭━━━━━━━━━━━━━━━━━━━ ')}     
+┃ ${chalk.greenBright('┃')} ${chalk.italic.magenta('Escriba sólo el número de')}
+┃ ${chalk.greenBright('┃')} ${chalk.italic.magenta('la opción para conectarse.')}
+┃ ${chalk.greenBright('╰━━━━━━━━━━━━━━━━━━━ ')} 
+╰${lineM}╯\n${chalk.bold.magentaBright('---> ')}`)
+//if (fs.existsSync(`./${authFile}/creds.json`)) {
+//console.log(chalk.bold.redBright(`PRIMERO BORRE EL ARCHIVO ${chalk.bold.greenBright("creds.json")} QUE SE ENCUENTRA EN LA CARPETA ${chalk.bold.greenBright(authFile)} Y REINICIE.`))
+//process.exit()
+if (!/^[1-2]$/.test(opcion)) {
+console.log('[ ❗ ] Por favor, seleccione solo 1 o 2.\n')
+}} while (opcion !== '1' && opcion !== '2' || fs.existsSync(`./${authFile}/creds.json`))
+}
+
+console.info = () => {}
+//console.warn = () => {}
 const connectionOptions = {
-        logger: pino({ level: 'silent' }),
-        printQRInTerminal: !pairingCode, 
-        mobile: useMobile, 
-        browser: ['DiablaBot-MD', '', ''],
-        auth: {
-            creds: state.creds,
-            keys: makeCacheableSignalKeyStore(state.keys, Pino({ level: "fatal" }).child({ level: "fatal" })),
-        },
-        markOnlineOnConnect: true, 
-        generateHighQualityLinkPreview: true, 
-        getMessage: async (clave) => {
-            let jid = jidNormalizedUser(clave.remoteJid)
-            let msg = await store.loadMessage(jid, clave.id)
-            return msg?.message || ""
-        },
-        msgRetryCounterCache,
-        msgRetryCounterMap,
-        defaultQueryTimeoutMs: undefined,   
-        version
-};
+logger: pino({ level: 'silent' }),
+printQRInTerminal: opcion == '1' ? true : methodCodeQR ? true : false,
+mobile: MethodMobile, 
+browser: opcion == '1' ? ['GokuBotLite-MD', 'Safari', '2.0.0'] : methodCodeQR ? ['GokuBotLite-MD', 'Safari', '2.0.0'] : ['Ubuntu', 'Chrome', '110.0.5585.95'],
+auth: {
+creds: state.creds,
+keys: makeCacheableSignalKeyStore(state.keys, Pino({ level: "fatal" }).child({ level: "fatal" })),
+},
+markOnlineOnConnect: true, 
+generateHighQualityLinkPreview: true, 
+getMessage: async (clave) => {
+let jid = jidNormalizedUser(clave.remoteJid)
+let msg = await store.loadMessage(jid, clave.id)
+return msg?.message || ""
+},
+msgRetryCounterCache,
+msgRetryCounterMap,
+defaultQueryTimeoutMs: undefined,   
+version
+}
 
 global.conn = makeWASocket(connectionOptions);
 
-    if (pairingCode && !conn.authState.creds.registered) {
-        if (useMobile) throw new Error('No se puede usar un código de emparejamiento con la API móvil')
+if (!fs.existsSync(`./${authFile}/creds.json`)) {
+if (opcion === '2' || methodCode) {
+//if (fs.existsSync(`./${authFile}/creds.json`)) {
+//console.log(chalk.bold.redBright(`PRIMERO BORRE EL ARCHIVO ${chalk.bold.greenBright("creds.json")} QUE SE ENCUENTRA EN LA CARPETA ${chalk.bold.greenBright(authFile)} Y REINICIE.`))
+//process.exit()
+//}
+opcion = '2'
+if (!conn.authState.creds.registered) {  
+if (MethodMobile) throw new Error('No se puede usar un código de emparejamiento con la API móvil')
 
-        let numeroTelefono
-        if (!!phoneNumber) {
-            numeroTelefono = phoneNumber.replace(/[^0-9]/g, '')
+let numeroTelefono
+if (!!phoneNumber) {
+numeroTelefono = phoneNumber.replace(/[^0-9]/g, '')
+if (!Object.keys(PHONENUMBER_MCC).some(v => numeroTelefono.startsWith(v))) {
+console.log(chalk.bgBlack(chalk.bold.redBright("🟢 Comience con el código de país de su número de WhatsApp, ejemplo: +59178862672\n")))
+process.exit(0)
+}} else {
+while (true) {
+numeroTelefono = await question(chalk.bgBlack(chalk.bold.yellowBright('🟢 Ingresa el número que sera bot\nPor ejemplo: +59178862672\n')))
+numeroTelefono = numeroTelefono.replace(/[^0-9]/g, '')
 
-            if (!Object.keys(PHONENUMBER_MCC).some(v => numeroTelefono.startsWith(v))) {
-                console.log(chalk.bgBlack(chalk.redBright("Comience con el código de país de su número de WhatsApp, Ejemplo: +5219992095479")))
-                process.exit(0)
-            }
-        } else {
-            numeroTelefono = await question(chalk.bgBlack(chalk.greenBright(`Por favor, escriba su número de WhatsApp 😍\nPor ejemplo: 573013114854 : `)))
-            numeroTelefono = numeroTelefono.replace(/[^0-9]/g, '')
-            if (!Object.keys(PHONENUMBER_MCC).some(v => numeroTelefono.startsWith(v))) {
-                console.log(chalk.bgBlack(chalk.redBright("Comience con el código de país de su número de WhatsApp, Ejemplo: 573013114854")))
-
-                numeroTelefono = await question(chalk.bgBlack(chalk.greenBright(`Por favor, escriba su número de WhatsApp 😍\nPor ejemplo: +5219992095479 : `)))
-                numeroTelefono = numeroTelefono.replace(/[^0-9]/g, '')
-                rl.close()
-            }
-        }
+if (numeroTelefono.match(/^\d+$/) && Object.keys(PHONENUMBER_MCC).some(v => numeroTelefono.startsWith(v))) {
+break 
+} else {
+console.log(chalk.bgBlack(chalk.bold.redBright("🟢 Por favor, escriba su número de WhatsApp.\nEjemplo: +5219992095479.\n")))
+}}
+rl.close()  
+} 
 
         setTimeout(async () => {
             let codigo = await conn.requestPairingCode(numeroTelefono)
             codigo = codigo?.match(/.{1,4}/g)?.join("-") || codigo
-            console.log(chalk.black(chalk.bgGreen(`Su código de emparejamiento: `)), chalk.black(chalk.white(codigo)))
+            console.log(chalk.yellow('🌸 Introduce el código de emparejamiento en WhatsApp.'));
+            console.log(chalk.black(chalk.bgGreen(`👑 CÓDIGO DE VINCULACIÓN 👑`)), chalk.black(chalk.white(codigo)))
         }, 3000)
-    }
+}}
+}
 
 conn.isInit = false;
 conn.well = false;
-conn.logger.info(`Ƈᴀʀɢᴀɴᴅᴏ．．．\n`);
+conn.logger.info(`[ 🦋 ] Cargando...\n`);
 
 if (!opts['test']) {
   if (global.db) {
@@ -248,7 +289,7 @@ unlinkSync(`./jadibts/${directorio}/${fileInDir}`)
 })
 if (SBprekey.length === 0) return; //console.log(chalk.cyanBright(`=> No hay archivos por eliminar.`))
 } catch (err) {
-console.log(chalk.bold.red(`=> Algo salio mal durante la eliminación, archivos no eliminados`))
+console.log(chalk.bold.red(`[ 🍓 ] Algo salio mal durante la eliminación, archivos no eliminados`))
 }}
 
 function purgeOldFiles() {
@@ -282,13 +323,19 @@ async function connectionUpdate(update) {
     global.timestamp.connect = new Date;
   }
   if (global.db.data == null) loadDatabase();
-  if (update.qr != 0 && update.qr != undefined) {
-    console.log(chalk.yellow('🚩ㅤEscanea este codigo QR, el codigo QR expira en 60 segundos.'));
-  }
-  if (connection == 'open') {
-    console.log(chalk.yellow('▣──────────────────────────────···\n│\n│❧ 𝙲𝙾𝙽𝙴𝙲𝚃𝙰𝙳𝙾 𝙲𝙾𝚁𝚁𝙴𝙲𝚃𝙰𝙼𝙴𝙽𝚃𝙴 𝙰𝙻 𝚆𝙷𝙰𝚃𝚂𝙰𝙿𝙿 ✅\n│\n▣──────────────────────────────···'));
-  }
+if (update.qr != 0 && update.qr != undefined || methodCodeQR) {
+if (opcion == '1' || methodCodeQR) {
+    console.log(chalk.yellow('[ 🦋 ] Escanea el código QR.'));
+ }}
+   if (connection == 'open') {
+console.log(chalk.greenBright('\n╭┈ ┈ ┈ ┈ ┈ • GokuBot-MD 🌸 • ┈ ┈ ┈ ┈ ┈╮\n┊ 💚 CONEXIÓN EXITOSA CON WHATSAPP 💚\n╰┈ ┈ ┈ ┈ ┈ ┈ ┈ ┈ ┈ ┈ ┈ ┈ ┈ ┈ ┈ ┈ ┈ ┈ ┈ ┈ ┈ ┈╯\n'))
+//conn.fakeReply('573012482694@s.whatsapp.net', '😄', '0@s.whatsapp.net', '😸 Soy SakuraBot\nRecientemente Me E Conectado', '0@s.whatsapp.net')
+   }
 let reason = new Boom(lastDisconnect?.error)?.output?.statusCode;
+if (reason == 405) {
+await fs.unlinkSync("./BotSession/" + "creds.json")
+console.log(chalk.bold.redBright(`[ ⚠ ] Conexión replazada, Por favor espere un momento me voy a reiniciar...\nSi aparecen error vuelve a iniciar con : npm start`)) 
+process.send('reset')}
 if (connection === 'close') {
     if (reason === DisconnectReason.badSession) {
         conn.logger.error(`[ ⚠ ] Sesión incorrecta, por favor elimina la carpeta ${global.authFile} y escanea nuevamente.`);
@@ -351,14 +398,14 @@ global.reloadHandler = async function(restatConn) {
     conn.ev.off('creds.update', conn.credsUpdate);
   }
 
-        conn.welcome = '*╔═══❖•ೋ° °ೋ•❖═══╗*\n*┃ඬ⃟ ✨ @subject*\n*╠══════════════*\n*┃ඬ⃟ ✨ @user*\n*┃ඬ⃟ ✨ 𝘉𝘪𝘦𝘯𝘷𝘦𝘯𝘪𝘥𝘰* \n*┃*\n*┃ඬ⃟ ✨ 𝘓𝘦𝘦 𝘓𝘢 𝘋𝘦𝘴𝘤𝘳𝘪𝘱𝘤𝘪𝘰́𝘯 𝘋𝘦𝘭 𝘎𝘳𝘶𝘱𝘰:*\n\n@desc\n\n*┃*\n*┃ 𝘋𝘪𝘧𝘳𝘶𝘵𝘢 𝘛𝘶 𝘌𝘴𝘵𝘢𝘥𝘪𝘢!!*\n*╚═══❖•ೋ° °ೋ•❖═══╝*';
-  conn.bye = '*╔═══❖•ೋ° °ೋ•❖═══╗*\n*┃ @user*\n*┃ඬ⃟ 👋𝙰𝚂𝚃𝙰 𝙿𝚁𝙾𝙽𝚃𝙾 𝙵𝙰𝙽𝚂 𝙳𝙴 𝙱𝚃𝚂* \n*╚═══❖•ೋ° °ೋ•❖═══╝*';
-  conn.spromote = '*@user 𝘉𝘪𝘦𝘯𝘷𝘦𝘯𝘪𝘥𝘰 𝘠𝘢 𝘌𝘳𝘦𝘴 𝘗𝘢𝘳𝘵𝘦 𝘋𝘦𝘭 𝘚𝘵𝘢𝘧𝘧🥳!!*';
-  conn.sdemote = '*@user 𝘑𝘰𝘥𝘦𝘳𝘵𝘦 𝘠𝘢 𝘕𝘰 𝘛𝘪𝘦𝘯𝘦𝘴 𝘌𝘭 𝘗𝘰𝘥𝘦𝘳 𝘋𝘦 𝘔𝘢𝘯𝘦𝘫𝘢𝘳 𝘌𝘯 𝘌𝘭 𝘎𝘳𝘶𝘱𝘰😆!!*';
-  conn.sDesc = '*𝘚𝘦 𝘏𝘢 𝘊𝘰𝘯𝘧𝘪𝘨𝘶𝘳𝘢𝘥𝘰 𝘜𝘯𝘢 𝘕𝘶𝘦𝘷𝘢 𝘋𝘦𝘴𝘤𝘳𝘪𝘱𝘤𝘪𝘰́𝘯 𝘋𝘦𝘭 𝘎𝘳𝘶𝘱𝘰*\n\n*𝙉𝙪𝙚𝙫𝙖 𝘿𝙚𝙨𝙘𝙧𝙞𝙥𝙘𝙞𝙤́𝙣:* @desc';
-  conn.sSubject = '*𝘚𝘦 𝘏𝘢 𝘏𝘦𝘤𝘩𝘰 𝘜𝘯 𝘊𝘢𝘮𝘣𝘪𝘰 𝘌𝘯 𝘌𝘭 𝘕𝘰𝘮𝘣𝘳𝘦 𝘋𝘦𝘭 𝘎𝘳𝘶𝘱𝘰*\n*𝙉𝙪𝙚𝙫𝙤 𝙉𝙤𝙢𝙗𝙧𝙚:* @subject';
-  conn.sIcon = '*𝘚𝘦 𝘏𝘢 𝘊𝘢𝘮𝘣𝘪𝘢𝘥𝘰 𝘓𝘢 𝘍𝘰𝘵𝘰 𝘋𝘦 𝘗𝘦𝘳𝘧𝘪𝘭 𝘋𝘦𝘭 𝘎𝘳𝘶𝘱𝘰✨!!*';
-  conn.sRevoke = '*𝘚𝘦 𝘏𝘢 𝘙𝘦𝘴𝘵𝘢𝘣𝘭𝘦𝘤𝘪𝘥𝘰 𝘌𝘭 𝘓𝘪𝘯𝘬 𝘋𝘦𝘭 𝘎𝘳𝘶𝘱𝘰!!*\n*𝙇𝙞𝙣𝙠 𝘼𝙘𝙩𝙪𝙖𝙡𝙞𝙯𝙖𝙙𝙤:* @revoke';
+ conn.welcome = '*╭ﾟ♡ﾟ* @subject *ﾟ♡ﾟ*\n┃✎﹏ *BIENVENIDO(A)!!*\n┃✎﹏ @user\n┃✎﹏ *LEA LA DESCRIPCIÓN DEL GRUPO*\n*╰ﾟ･:✿｡･ﾟ♡ﾟ𝑫𝑰𝑬𝑮𝑶 𝑶𝑭𝑪 ﾟ♡ﾟ･｡✿:･ﾟ*\n\n@desc';
+    conn.bye = '*╭══════ ⎘『 ♡ 』⎗ ══════╮*\n╏ @user\n╏ *NO LE SABE AL GRUPO, CHAO!!* 😸\n*╰══════ ⎘『 ♡ 』⎗ ══════╯*';
+  conn.spromote = '@user\n𝗔𝗛𝗢𝗥𝗔 𝗘𝗦 𝗔𝗗𝗠𝗜𝗡 𝗗𝗘 𝗘𝗦𝗧𝗘 𝗚𝗥𝗨𝗣𝗢.';
+  conn.sdemote = '@user\n𝗗𝗘𝗝𝗔 𝗗𝗘 𝗦𝗘𝗥 𝗔𝗗𝗠𝗜𝗡 𝗘𝗡 𝗘𝗦𝗧𝗘 𝗚𝗥𝗨𝗣𝗢.';
+  conn.sDesc = '𝗟𝗔 𝗡𝗨𝗘𝗩𝗔 𝗗𝗘𝗦𝗖𝗥𝗜𝗣𝗖𝗜𝗢𝗡 𝗗𝗘𝗟 𝗚𝗥𝗨𝗣𝗢 𝗘𝗦 :\n\n@desc';
+  conn.sSubject = '𝗘𝗟 𝗡𝗢𝗠𝗕𝗥𝗘 𝗗𝗘𝗟 𝗚𝗥𝗨𝗣𝗢 𝗖𝗔𝗠𝗕𝗜𝗢 𝗔 :\n@subject';
+  conn.sIcon = '𝗦𝗘 𝗛𝗔 𝗖𝗔𝗠𝗕𝗜𝗔𝗗𝗢 𝗘𝗟 𝗜𝗖𝗢𝗡𝗢 𝗗𝗘𝗟 𝗚𝗥𝗨𝗣𝗢.';
+  conn.sRevoke = '𝗘𝗟 𝗡𝗨𝗘𝗩𝗢 𝗟𝗜𝗡𝗞 𝗗𝗘𝗟 𝗚𝗥𝗨𝗣𝗢 𝗘𝗦 :\n@revoke';
 
   conn.handler = handler.handler.bind(global.conn);
   conn.participantsUpdate = handler.participantsUpdate.bind(global.conn);
@@ -487,39 +534,27 @@ async function _quickTest() {
   const [ffmpeg, ffprobe, ffmpegWebp, convert, magick, gm, find] = test;
   const s = global.support = {ffmpeg, ffprobe, ffmpegWebp, convert, magick, gm, find};
   Object.freeze(global.support);
-}
+  }
 setInterval(async () => {
   if (stopped === 'close' || !conn || !conn.user) return;
   const a = await clearTmp();
-  //console.log(chalk.cyanBright(`\n▣───────────[ 𝙰𝚄𝚃𝙾𝙲𝙻𝙴𝙰𝚁TMP ]──────────────···\n│\n▣─❧ 𝙰𝚁𝙲𝙷𝙸𝚅𝙾𝚂 𝙴𝙻𝙸𝙼𝙸𝙽𝙰𝙳𝙾𝚂 ✅\n│\n▣───────────────────────────────────────···\n`));
+console.log(chalk.greenBright(`\n╭─━━━━━━⊱ ARCHIVO ⊰━━━━━━─╮\n│✅ Archivo no necesario eliminado.\n╰─━━━━━━⊱ ARCHIVO ⊰━━━━━━─╯\n`));
 }, 180000);
 setInterval(async () => {
   if (stopped === 'close' || !conn || !conn.user) return;
   await purgeSession();
-  //console.log(chalk.cyanBright(`\n▣────────[ AUTOPURGESESSIONS ]───────────···\n│\n▣─❧ ARCHIVOS ELIMINADOS ✅\n│\n▣────────────────────────────────────···\n`));
+console.log(chalk.greenBright(`\n╭─━━━━━━⊱ ARCHIVO ⊰━━━━━━─╮\n│✅ Archivo no necesario eliminado.\n╰─━━━━━━⊱ ARCHIVO ⊰━━━━━━─╯\n`));
 }, 1000 * 60 * 60);
 setInterval(async () => {
   if (stopped === 'close' || !conn || !conn.user) return;
   await purgeSessionSB();
-  //console.log(chalk.cyanBright(`\n▣────────[ AUTO_PURGE_SESSIONS_SUB-BOTS ]───────────···\n│\n▣─❧ ARCHIVOS ELIMINADOS ✅\n│\n▣────────────────────────────────────···\n`));
+console.log(chalk.greenBright(`\n╭─━━━━━━⊱ ARCHIVO ⊰━━━━━━─╮\n│✅ Archivo no necesario eliminado.\n╰─━━━━━━⊱ ARCHIVO ⊰━━━━━━─╯\n`));
 }, 1000 * 60 * 60);
 setInterval(async () => {
   if (stopped === 'close' || !conn || !conn.user) return;
   await purgeOldFiles();
-  //console.log(chalk.cyanBright(`\n▣────────[ AUTO_PURGE_OLDFILES ]───────────···\n│\n▣─❧ ARCHIVOS ELIMINADOS ✅\n│\n▣────────────────────────────────────···\n`));
-}, 1000 * 60 * 60);
-setInterval(async () => {
-  if (stopped === 'close' || !conn || !conn.user) return;
-  const _uptime = process.uptime() * 1000;
-  const uptime = clockString(_uptime);
-  const bio = `Activa Durante: ⏳️ ${uptime}`;
-  await conn.updateProfileStatus(bio).catch((_) => _);
-}, 60000);
-function clockString(ms) {
-  const d = isNaN(ms) ? '--' : Math.floor(ms / 86400000);
-  const h = isNaN(ms) ? '--' : Math.floor(ms / 3600000) % 24;
-  const m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60;
-  const s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60;
-  return [d, ' ☆ ️', h, '☆ ', m, ' ☆ ', s, '  '].map((v) => v.toString().padStart(2, 0)).join('');
-}
-_quickTest().catch(console.error);
+console.log(chalk.greenBright(`\n╭─━━━━━━⊱ ARCHIVO ⊰━━━━━━─╮\n│✅ Archivo no necesario eliminado.\n╰─━━━━━━⊱ ARCHIVO ⊰━━━━━━─╯\n`));
+}, 180000)
+_quickTest()
+.then()
+.catch(console.error)
