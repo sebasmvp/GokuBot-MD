@@ -263,7 +263,7 @@ global.rpgshop = { // Tienda
       kyubi: '🌀 Magia',
       gold: '👑 Oro',
       money: '👾 GokuCoins',
-      tiketcoin: '🎫 Sakura Tickers',
+      tiketcoin: '🎫 Goku Tickers',
       stamina: '✨ Energía',
       potion: '🥤 Poción',
       aqua: '💧 Agua',
