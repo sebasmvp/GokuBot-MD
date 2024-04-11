@@ -8,7 +8,7 @@ const handler = async (m, { conn, usedPrefix }) => {
     return conn.sendMessage(m.chat, {text: '*🧸 Tienes Que Utilizarlo En El Numero Del Bot Oficial.*'}, {quoted: m});
   }
   await conn.sendMessage(m.chat, {text: '*🧩 Iɴɪᴄɪᴀɴᴅᴏ Eʟ Pʀᴏᴄᴇsᴏ Dᴇ Eʟɪᴍɪɴᴀᴄɪᴏ́ɴ Dᴇ Tᴏᴅᴏs Lᴏs Aʀᴄʜɪᴠᴏs Dᴇ Sᴇssɪᴏɴ, Exᴇᴄᴛᴏ Eʟ Aʀᴄʜɪᴠᴏ creds.json...*'}, {quoted: m});
-  const sessionPath = './SakuraBotSession/';
+  const sessionPath = './GokuBotSession/';
   try {
     if (!existsSync(sessionPath)) {
       return await conn.sendMessage(m.chat, {text: '*📍 La Carpeta GokuBotSession No Existe O Está Vacia.*'}, {quoted: m});
@@ -34,6 +34,6 @@ const handler = async (m, { conn, usedPrefix }) => {
 };
 handler.help = ['del_reg_in_session_owner'];
 handler.tags = ['owner'];
-handler.command = /^(del_reg_in_session_owner|dsowner|clearallsession)$/i;
+handler.command = /^(del_reg_in_session_owner|dsowner|delgoku|clearallsession)$/i;
 handler.rowner = true
 export default handler;
