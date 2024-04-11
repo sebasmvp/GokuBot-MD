@@ -2,19 +2,17 @@
   "name": "GokuBot-MD-",
   "version": "1.0.0",
   "description": "Super Bot De WhatsApp",
-  "main": "index.js",
+  "  "main": "index.js",
   "type": "module",
   "directories": {
     "lib": "lib",
     "src": "src",
     "plugins": "plugins"
   },
-    "scripts": {
+  "scripts": {
     "start": "node index.js",
-    "qr": "node index.js qr",
-    "code": "node index.js code",
     "test": "node test.js",
-    "test2": "nodemon index.js", 
+    "test2": "nodemon index.js",
     "eslint": "eslint .",
     "eslintfix": "eslint --fix ."
   },
