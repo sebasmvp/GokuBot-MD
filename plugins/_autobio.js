@@ -1,16 +1,16 @@
-let handler = m => m 
+let handler = m => m
 handler.all = async function (m) {
 let setting = global.db.data.settings[this.user.jid]
-        
+
 let _uptime = process.uptime() * 1000
 let _muptime
 if (process.send) { process.send('uptime')
 _muptime = await new Promise(resolve => { process.once('message', resolve) 
 setTimeout(resolve, 2000) }) * 1000}
 let uptime = clockString(_uptime)
-let bio = `𝐄𝐬𝐭𝐞 𝐔𝐬𝐮𝐚𝐫𝐢𝐨 𝐔𝐬𝐚 𝐆𝐨𝐤𝐮𝐁𝐨𝐭-𝐌𝐃 🐈💖 𝐀𝐜𝐭𝐢𝐯𝐨: ${uptime}`
+let bio = `𝗕𝗼𝘁: ${[`𝖦𝗈𝗄𝗎𝖡𝗈𝗍-𝖬𝖣 💫`, `𝖦𝗈𝗄𝗎-𝖡𝗈𝗍-𝖬𝖣 🌼`].getRandom()}                                        
+                                        𝗔𝗰𝘁𝗶𝘃𝗼: ${[`𝖲𝗂 ✅`, `𝖭𝗈 ❎`].getRandom()}                                                𝗢𝘄𝗻𝗲𝗿: ${[`𝖩𝗈𝗌𝗍𝗂𝗇 𝖮𝖿𝗂𝖼𝗂𝖺𝗅 ♨️`, `𝖩𝗈𝗌𝗍𝗂𝗇 ~ 𝖩𝗈𝗌𝗍𝗂𝗇𝖺 😼`].getRandom()}` 
 await this.updateProfileStatus(bio).catch(_ => _)
-//await this.updateProfilePicture(gokuImg.getRandom()).catch(_ => _)
 setting.status = new Date() * 1
 } 
 export default handler
@@ -21,4 +21,4 @@ function clockString(ms) {
   let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
   let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
   return [d, ' » ', h, ' ・ ', m, ' ・ ', s].map(v => v.toString().padStart(2, 0)).join('') 
-} 
+}
