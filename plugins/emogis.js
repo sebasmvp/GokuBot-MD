@@ -12,7 +12,7 @@ conn.sendMessage(m.chat, {text: love, mentions: [m.sender]}, {quoted: m})
 }
 handler.help = ['love']
 handler.tags = ['juegos']
-handler.command = /^(emogis|🤖|jostin|emogis2)$/i
+handler.command = /^(decir|hablar|emogi|emogis)$/i
 
 //handler.register = true
 
