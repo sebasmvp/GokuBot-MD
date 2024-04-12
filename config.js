@@ -21,7 +21,7 @@ global.owner = [
 global.suittag = ['593939005387'];
 global.prems = ['593939005387'];
 
-global.lenguajeSK = es //idioma de gokubot
+global.lenguajeJB = es //idioma de gokubot
 
 global.packname = '𝙂𝙤𝙠𝙪𝘽𝙤𝙩-𝙈𝘿 💖🌻';
 global.author = '𝗝𝗼𝘀𝘁𝗶𝗻 🥀';
@@ -32,6 +32,7 @@ global.titulowm2 = `𝙹𝚘𝚜𝚝𝚒𝚗 𝙾𝚏𝚒𝚌𝚒𝚊𝚕`
 global.igfg = '𝐉𝐨𝐬𝐭𝐢𝐧';
 global.wait = '*⏳ 𝐄𝐬𝐩𝐞𝐫𝐞 𝐔𝐧 𝐌𝐨𝐦𝐞𝐧𝐭𝐨.....*';
 global.vs = '1.0 (beta)';
+global.vsJB = '0.3 (Sub-beta)';
 
 //imagenes
 global.imagen1 = fs.readFileSync('./Menu2.jpg');
