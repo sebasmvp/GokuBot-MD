@@ -19,5 +19,5 @@ conn.sendMessage(m.chat,{image: {url: pp}, caption: love, mentions: [m.sender]},
 handler.help = ['love  @user']
 handler.tags = ['fun']
 handler.command = /^(love)$/i
-handler.register = true
+//handler.register = true
 export default handler
