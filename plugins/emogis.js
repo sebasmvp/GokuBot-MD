@@ -10,10 +10,12 @@ conn.sendMessage(m.chat, {text: love, mentions: [m.sender]}, {quoted: m})
 //conn.reply(m.chat, `*🚩 Ocurrió un fallo*`)
 
 }
-handler.help = ['love']
-handler.tags = ['juegos']
-handler.command = /^(decir|enviar|emogi|emogis)$/i
+handler.help = ['dado']
+handler.tags = ['game']
+handler.customPrefix = /decir|paja|.|#|/|s/i
+handler.command = new RegExp
+export default handler
 
 //handler.register = true
 
-export default handler
+//export default handler
