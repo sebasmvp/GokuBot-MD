@@ -3,7 +3,7 @@ let who = m.quoted ? m.quoted.sender : m.mentionedJid && m.mentionedJid[0] ? m.m
 let name = conn.getName(who)
 const pp = './storage/logos/Menu2.jpg'
 
-let love = `${text}
+let love = `${name} Dice ${text}
 
 *Tu Puto ${name} Invoca*`
 
