@@ -5,7 +5,7 @@ let name = conn.getName(who)
 
 const pp = './storage/logos/Menu2.jpg'
 
-let love = `> Mensaje: ${text} 🐒\n\n*El puto de ${name} busca marido. ⭐️*`
+let love = `> Mensaje: ${text} 🚩\n\n*${name} busca yuri. 🦙*`
 
 conn.sendMessage(m.chat, {text: love, mentions: [m.sender]}, {quoted: fkontak2})
 
