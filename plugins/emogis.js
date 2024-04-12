@@ -3,7 +3,7 @@ let who = m.quoted ? m.quoted.sender : m.mentionedJid && m.mentionedJid[0] ? m.m
 let name = conn.getName(who)
 const pp = './storage/logos/Menu2.jpg'
 
-let love = `🐒\n\n*Este puto ${name} quiere jodee. ⭐️*`
+let love = `🐒\n\n*Este puto ${name} busca marido. ⭐️*`
 
 conn.sendMessage(m.chat, {text: love, mentions: [m.sender]}, {quoted: m})
 
