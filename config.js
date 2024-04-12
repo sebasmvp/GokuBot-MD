@@ -21,7 +21,7 @@ global.owner = [
 global.suittag = ['593939005387'];
 global.prems = ['593939005387'];
 
-global.lenguajeJB = es //idioma de gokubot
+global.lenguajeSK = es //idioma de gokubot
 
 global.packname = '𝙂𝙤𝙠𝙪𝘽𝙤𝙩-𝙈𝘿 💖🌻';
 global.author = '𝗝𝗼𝘀𝘁𝗶𝗻 🥀';
