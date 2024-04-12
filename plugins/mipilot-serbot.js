@@ -91,7 +91,7 @@ function _0x5eec() {
         'fdSPq',
         'now',
         'includes',
-        'SakuraBot',
+        'GokuBot',
         'NzZjM2ZmMzU2MTEyMzM3OTczOWU5ZmFmMDZjYzUzO',
         'Unzso',
         'registered',
@@ -173,7 +173,7 @@ function _0x5eec() {
         'afbBP',
         'off',
         'uDNRr',
-        '🚩\x20Conexión\x20reemplazada,\x20se\x20ha\x20abierto\x20otra\x20nueva\x20sesion,\x20por\x20favor,\x20cierra\x20la\x20sesión\x20actual\x20primero',
+        '🚩\x20Conexión\x20reemplazada\x20se\x20ha\x20abierto\x20otra\x20nueva\x20sesion,\x20por\x20favor,\x20cierra\x20la\x20sesión\x20actual\x20primero',
         'credsUpdate',
         'indexOf',
         'creds.update',
@@ -326,7 +326,7 @@ let handler = async (_0x2fcfcb, {
             'KjvHb': 'call',
             'StjNe': _0x2496e5(0x1e9),
             'shNxz': _0x2496e5(0x1ad),
-            'YOXAf': '🚩\x20*La\x20conexión\x20se\x20ha\x20cerrado,\x20tendras\x20que\x20volver\x20a\x20conectarse\x20usando:*\x0a!deletesesion\x20(Para\x20borrar\x20los\x20datos\x20y\x20poder\x20volver\x20a\x20solitar\x20el\x20QR\x20o\x20el\x20código\x20de\x20emparejamiento',
+            'YOXAf': '🧿\x20*La\x20conexión\x20se\x20ha\x20cerrado,\x20tendras\x20que\x20volver\x20a\x20conectarse\x20usando:*\x0a!deletesesion\x20(Para\x20borrar\x20los\x20datos\x20y\x20poder\x20volver\x20a\x20solitar\x20el\x20QR\x20o\x20el\x20código\x20de\x20emparejamiento',
             'vEanl': function (_0x4f586a, _0x2c2001) {
                 return _0x4f586a !== _0x2c2001;
             },
