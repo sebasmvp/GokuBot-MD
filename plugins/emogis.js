@@ -14,6 +14,6 @@ handler.help = ['love']
 handler.tags = ['juegos']
 handler.command = /^(emogis|🚀💫|🤖|jostin|emogis2)$/i
 
-handler.register = true
+//handler.register = true
 
 export default handler
