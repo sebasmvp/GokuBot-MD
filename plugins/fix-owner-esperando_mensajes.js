@@ -8,7 +8,7 @@ const handler = async (m, { conn, usedPrefix }) => {
     return conn.sendMessage(m.chat, {text: '*🧸 Tienes Que Utilizarlo En El Numero Del Bot Oficial.*'}, {quoted: fkontak2});
   }
   await conn.sendMessage(m.chat, {text: '*🧩 Iɴɪᴄɪᴀɴᴅᴏ Eʟ Pʀᴏᴄᴇsᴏ Dᴇ Eʟɪᴍɪɴᴀᴄɪᴏ́ɴ Dᴇ Tᴏᴅᴏs Lᴏs Aʀᴄʜɪᴠᴏs Dᴇ Sᴇssɪᴏɴ, Exᴇᴄᴛᴏ Eʟ Aʀᴄʜɪᴠᴏ creds.json...*'}, {quoted: fkontak2});
-  const sessionPath = './GokuBotSession/';
+  const sessionPath = './BotSession/';
   try {
     if (!existsSync(sessionPath)) {
       return await conn.sendMessage(m.chat, {text: '*📍 La Carpeta GokuBotSession No Existe O Está Vacia.*'}, {quoted: fkontak2});
