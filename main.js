@@ -329,7 +329,7 @@ if (opcion == '1' || methodCodeQR) {
  }}
    if (connection == 'open') {
 console.log(chalk.greenBright('\n╭┈ ┈ ┈ ┈ ┈ • GokuBot-MD 🌸 • ┈ ┈ ┈ ┈ ┈╮\n┊ 💚 CONEXIÓN EXITOSA CON WHATSAPP 💚\n╰┈ ┈ ┈ ┈ ┈ ┈ ┈ ┈ ┈ ┈ ┈ ┈ ┈ ┈ ┈ ┈ ┈ ┈ ┈ ┈ ┈ ┈╯\n'))
-//conn.fakeReply('573012482694@s.whatsapp.net', '😄', '0@s.whatsapp.net', '😸 Soy SakuraBot\nRecientemente Me E Conectado', '0@s.whatsapp.net')
+//conn.fakeReply('593939005387@s.whatsapp.net', '😄', '0@s.whatsapp.net', '😸 Soy GokuBot\nRecientemente Me E Conectado', '593939005387@s.whatsapp.net')
    }
 let reason = new Boom(lastDisconnect?.error)?.output?.statusCode;
 if (reason == 405) {
@@ -398,7 +398,7 @@ global.reloadHandler = async function(restatConn) {
     conn.ev.off('creds.update', conn.credsUpdate);
   }
 
- conn.welcome = '*╭ﾟ♡ﾟ* @subject *ﾟ♡ﾟ*\n┃✎﹏ *BIENVENIDO(A)!!*\n┃✎﹏ @user\n┃✎﹏ *LEA LA DESCRIPCIÓN DEL GRUPO*\n*╰ﾟ･:✿｡･ﾟ♡ﾟ𝑫𝑰𝑬𝑮𝑶 𝑶𝑭𝑪 ﾟ♡ﾟ･｡✿:･ﾟ*\n\n@desc';
+ conn.welcome = '*╭ﾟ♡ﾟ* @subject *ﾟ♡ﾟ*\n┃✎﹏ *BIENVENIDO(A)!!*\n┃✎﹏ @user\n┃✎﹏ *LEA LA DESCRIPCIÓN DEL GRUPO*\n*╰ﾟ･:✿｡･ﾟ𝑱𝑶𝑺𝑻𝑰𝑵 𝑶𝑭𝑪 ﾟ♡ﾟ･｡✿:･ﾟ*\n\n@desc';
     conn.bye = '*╭══════ ⎘『 ♡ 』⎗ ══════╮*\n╏ @user\n╏ *NO LE SABE AL GRUPO, CHAO!!* 😸\n*╰══════ ⎘『 ♡ 』⎗ ══════╯*';
   conn.spromote = '@user\n𝗔𝗛𝗢𝗥𝗔 𝗘𝗦 𝗔𝗗𝗠𝗜𝗡 𝗗𝗘 𝗘𝗦𝗧𝗘 𝗚𝗥𝗨𝗣𝗢.';
   conn.sdemote = '@user\n𝗗𝗘𝗝𝗔 𝗗𝗘 𝗦𝗘𝗥 𝗔𝗗𝗠𝗜𝗡 𝗘𝗡 𝗘𝗦𝗧𝗘 𝗚𝗥𝗨𝗣𝗢.';
