@@ -14,17 +14,20 @@ _Jostin/Jostin4_
 🧩 *Grupos Oficiales:*
 1) *${gp1}*\n
 ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+✨️ *_Grupos Oficiales 2:*
 2) *${gp2}*\n
 ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 🧸 *Canal De Actualización Del Bot:*
  *${channel}*\n
 ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-🌹 *Canal Informa:*
+🌹 *Canal Información:*
 *${channel2}*\n
 ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 📍 *Canal De Youtube:*
 ${yt}
-┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈`
+┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+👾 *PayPal*
+`
 await conn.sendFile(m.chat, media, 'gata.mp4', str, fkontak)}
 handler.command = /^cuentas|cuentasoficiales$/i
 handler.exp = 35
