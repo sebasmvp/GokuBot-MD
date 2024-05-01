@@ -1,4 +1,4 @@
-import Scraper from '@SumiFX/Scraper
+import fetch from '@SumiFX/Scraper';
 
 var handler = async (m, { conn, args, command, usedPrefix, text }) => {
 
