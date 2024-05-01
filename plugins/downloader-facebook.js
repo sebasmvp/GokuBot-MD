@@ -1,7 +1,7 @@
 import Scraper from '@SumiFX/Scraper'
 
 let handler = async (m, { conn, args, usedPrefix, command }) => {
-if (!args[0]) return m.reply('🌳 *Ingrese un enlace de facebook*\n\nEjemplo, !fb https://fb.watch/kAOXy3wf2L/?mibextid=Nif5oz`)
+if (!args[0]) return m.reply('🌳 *Ingrese un enlace de facebook*\n\n`Ejemplo:`\n' + `> *${usedPrefix + command}* https://fb.watch/kAOXy3wf2L/?mibextid=Nif5oz`)
 
 try {
 let { title, SD, HD } = await Scraper.fbdl(args[0])
