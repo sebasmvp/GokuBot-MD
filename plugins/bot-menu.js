@@ -5,7 +5,7 @@ try {
 
 let user = conn.getName(m.sender)
 
-let pp = await conn.profilePictureUrl(conn.user.jid).catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png')
+let pp = 'https://telegra.ph/file/24fa902ead26340f3df2c.png'
 
 //m.react('🏷️')
 
@@ -24,16 +24,16 @@ _(Para ver el menu audios)_`
 
 //await conn.reply(m.chat, menu, m, { contextInfo: { externalAdReply: {title: '👋 ¡Hola!', body: wm, sourceUrl: global.channel, thumbnail: pp }}})
 
-await conn.reply(m.chat, menu, m, }}})
+await conn.reply(m.chat, menu, m, { contextInfo: { externalAdReply: {title: '👋 ¡Hola!', body: wm, sourceUrl: global.channel, thumbnail: pp }}})
 
-} catch {
+//} catch {
 conn.reply(m.chat, `*🚩 Ocurrió un fallo*`, m, )
 //console.log(e)
 }}
-handler.help = ['menu']
-handler.tags = ['bot']
+//handler.help = ['menu']
+//handler.tags = ['bot']
 handler.command = /^(mamon)$/i
-handler.register = true
+//handler.register = true
 
 export default handler
 
