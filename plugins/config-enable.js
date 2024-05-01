@@ -360,8 +360,18 @@ break;
       if (!/[01]/.test(command)) return await conn.sendMessage(m.chat, {text: optionsFull}, {quoted: m});
       throw false;
   }
-     conn.sendMessage(m.chat, {text: `ꨄ︎ *🧸 Tipo*: ${type}\nꨄ︎ *📍 Estado*: ${isEnable ? 'Activo ✅️' : 'Desactivo ❎️'}\nꨄ︎ *🧩 Para*: ${isAll ? '𝙂𝙤𝙠𝙪𝘽𝙤𝙩-𝙈𝘿 ' : isUser ? '' : 'Este Chat'}`}, {quoted: m});
-};
+
+await conn.reply(m.chat, `╭┄〔 *${wm}* 〕┄⊱
+┆🗂️ ᴏᴘᴄɪᴏɴ: ${type} 
+┆——————«•»——————
+┆🎚️ ᴇsᴛᴀᴅᴏ: ${isEnable ? 'ᴀᴄᴛɪᴠᴀᴅᴏ' : 'ᴅᴇsᴀᴄᴛɪᴠᴀᴅᴏ'}
+┆——————«•»——————
+┆📣 ᴘᴀʀᴀ: ${isAll ? 'ᴇsᴛᴇ ʙᴏᴛ' : isUser ? '' : 'ᴇsᴛᴇ ᴄʜᴀᴛ'} 
+╰━━━⊰ 𓃠 ${vs} ⊱━━━━დ`, m, {
+contextInfo: { externalAdReply :{ mediaUrl: null, mediaType: 1, description: null, 
+title: `${wm}`,
+body: '', previewType: 0, thumbnail: imagen4, sourceUrl: [channel, channel2, md, yt].getRandom()}}})} 
+
 handler.help = ['en', 'dis'].map((v) => v + 'able <option>');
 handler.tags = ['group', 'owner'];
 handler.command = /^((en|dis)able|(tru|fals)e|(turn)?o(n|ff)|[01])$/i;
