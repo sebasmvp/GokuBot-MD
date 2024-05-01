@@ -1,8 +1,10 @@
-import fetch from 'node-fetch'
-import axios from 'axios'
-import instagramGetUrl from 'instagram-url-direct'
-import { instagram } from '@xct007/frieren-scraper'
-import { instagramdl } from '@bochilteam/scraper'
+import fetch from 'node-fetch';
+import axios from 'axios';
+import instagramGetUrl from 'instagram-url-direct';
+import {instagram} from '@xct007/frieren-scraper';
+import {instagramdl} from '@bochilteam/scraper';
+import instagramDl from '@sasmeee/igdl';
+import {fileTypeFromBuffer} from 'file-type';
 
 var handler = async (m, {conn, args, command, usedPrefix}) => {
 
