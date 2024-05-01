@@ -1,4 +1,5 @@
-import fetch from '@SumiFX/Scraper';
+import fetch from 'node-fetch'
+import { facebook } from '@SumiFX/Scraper'
 
 var handler = async (m, { conn, args, command, usedPrefix, text }) => {
 
