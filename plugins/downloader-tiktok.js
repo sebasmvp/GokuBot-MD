@@ -1,4 +1,8 @@
-import fg from 'api-dylux'
+import fg from 'api-dylux' 
+import axios from 'axios'
+import cheerio from 'cheerio'
+import { tiktok } from "@xct007/frieren-scraper";
+let generateWAMessageFromContent = (await import(global.baileys)).default
 import { tiktokdl } from '@bochilteam/scraper'
 
 var handler = async (m, { conn, text, args, usedPrefix, command}) => {
