@@ -1,9 +1,9 @@
 /* Creditos de los tags a @darlyn1234 y diseño a @ALBERTO9883 */
-import fetch from 'node-fetch';
-import Spotify from 'spotifydl-x';
-import fs from 'fs';
-import NodeID3 from 'node-id3';
-import axios from 'axios';
+import {fetch} from 'node-fetch';
+import {Spotify} from 'spotifydl-x';
+import {fs} from 'fs';
+import {NodeID3} from 'node-id3';
+import {axios} from 'axios';
 import {find_lyrics} from '@brandond/findthelyrics';
 
 const credentials = {
