@@ -6,7 +6,6 @@ import cheerio from 'cheerio';
 import fetch from 'node-fetch';
 import axios from 'axios';
 import moment from 'moment-timezone';
-//import { es } from "./idiomas/tota-idioma.js"
 
 global.botnumber = ""
 global.confirmCode = ""
@@ -14,6 +13,7 @@ global.confirmCode = ""
 global.owner = [
 ['593939005387', '👑 𝗖𝗿𝗲𝗮𝗱𝗼𝗿 ✨️', true],
 ['50558124470', '𝗦𝘂𝗽𝗽𝗼𝗿𝘁 𝗧𝗮𝗹𝗹𝘆💻', true],
+['573012482597', '𝗗𝗶𝗲𝗴𝗼.𝗢𝗳𝗰 ☄️', true],
 ['595981477001'],
 ['5491130182250', '𝗘𝗻𝘇𝗶𝘁𝗼𝗩𝗮𝘀𝗲', true]]
 
@@ -29,36 +29,6 @@ global.titulowm2 = `𝙹𝚘𝚜𝚝𝚒𝚗 𝙾𝚏𝚒𝚌𝚒𝚊𝚕`
 global.igfg = '𝐉𝐨𝐬𝐭𝐢𝐧';
 global.wait = '*⏳ 𝐄𝐬𝐩𝐞𝐫𝐞 𝐔𝐧 𝐌𝐨𝐦𝐞𝐧𝐭𝐨.....*';
 global.vs = '1.0 (beta)';
-global.vsJB = '0.3 (Sub-beta)';
-
-//imagenes
-global.imagen1 = fs.readFileSync('./Menu2.jpg');
-global.imagen2 = fs.readFileSync('./src/nuevobot.jpg');
-global.imagen3 = fs.readFileSync('./src/Pre Bot Publi.png');
-global.imagen4 = fs.readFileSync('./Menu.png');
-global.imagen5 = fs.readFileSync('./src/+18.jpg');
-global.imagen6 = fs.readFileSync('./Menu3.png');
-
-
-global.gp1 = 'https://chat.whatsapp.com/G9MpDVmJtbiIpItEZpg70s' //Grupo Oficial De GokuBot
-
-global.gp2 = 'https://chat.whatsapp.com/KQA5YEnMMhE9PQODSh6I7B' //Grupo Oficial De GokuBot 2
-
-global.gp3 = '' 
-
-global.channel = 'https://whatsapp.com/channel/0029VaJL0xn0LKZL7FtiRs1e' //Canal Oficial
-
-global.channel2 = '' //Canal Información Próximamente 
-
-global.yt = 'https://www.youtube.com/@Jostin-ofc' //Canal De Youtube
-
-global.md = 'https://github.com/Jostin207' //Github Oficial
-
-//global.luna = '😾 ¿𝗬𝗼 𝗤𝘂𝗲𝗲?'
-
-//global.sol = '😄 ¿𝗤𝘂𝗲 𝗬𝗼 𝗤𝘂𝗲?'
-
-//global.lusol = '😼 ¿𝗧𝗲 𝗚𝘂𝘀𝘁𝗼 𝗢 𝗤𝘂𝗲?'
 
 //saludo user, buen dia
 var ase = new Date(); var hour = ase.getHours(); switch(hour){ case 0: hour = 'Linda Mañana'; break; case 1: hour = 'Linda Mañana'; break; case 2: hour = 'Linda Mañana'; break; case 3: hour = 'Linda Mañana'; break; case 4: hour = 'linda mañana'; break; case 5: hour = 'Linda Mañana'; break; case 6: hour = 'Linda Mañana'; break; case 7: hour = 'Linda Mañana'; break; case 8: hour = 'Linda Mañana'; break; case 9: hour = 'Linda Mañana'; break; case 10: hour = 'Lindo Dia'; break; case 11: hour = 'Lindo Dia'; break; case 12: hour = 'Lindo Dia'; break; case 13: hour = 'Lindo Dia'; break; case 14: hour = 'Linda Tarde'; break; case 15: hour = 'Linda Tarde'; break; case 16: hour = 'Linda Tarde'; break; case 17: hour = 'Linda Tarde'; break; case 18: hour = 'Linda Noche'; break; case 19: hour = 'Linda Noche'; break; case 20: hour = 'Linda Noche'; break; case 21: hour = 'Linda Noche'; break; case 22: hour = 'Linda Noche'; break; case 23: hour = 'Linda Noche'; break;}
