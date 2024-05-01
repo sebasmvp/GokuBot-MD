@@ -93,6 +93,4 @@ Para que no pierda su progreso en GokuBot, estos comandos realizarán un respald
 href="https://github.com/Jostin207"><img src="https://github.com/Jostin207.png" width="200" height="200" alt="Jostin"/></a>
 
 ## Colaboradores Del Bot  
-[![Jostin207](https://github.com/Jostin207.png?size=100)](https://github.com/Jostin207) 
-[![Ender-GB-Isis777](https://github.com/Ender-GB-Isis777.png?size=100)
-[![Diego](https://github.com/diegojadibot.png?size=100)](https://github.com/diegojadibot) [![Alexis](https://github.com/AzamiJs.png?size=100)](https://github.com/AzamiJs) [![Mario](https://github.com/elrebelde21.png?size=100)](https://github.com/elrebelde21) [![Eder](https://github.com/WOTCHITO.png?size=100)](https://github.com/WOTCHITO)
+[![Jostin207](https://github.com/Jostin207.png?size=100)](https://github.com/Jostin207) [![Diego](https://github.com/Diego-YL-177.png?size=100)](https://github.com/Diego-YL-177) [![Ender-GB-Isis777](https://github.com/Ender-GB-Isis777.png?size=100) [![Alexis](https://github.com/AzamiJs.png?size=100)](https://github.com/AzamiJs) [![Mario](https://github.com/elrebelde21.png?size=100)](https://github.com/elrebelde21) [![Eder](https://github.com/WOTCHITO.png?size=100)](https://github.com/WOTCHITO)
