@@ -1,19 +1,5 @@
-//CÓDIGO ADAPTADO POR https://github.com/GataNina-Li | @gata_dios & https://github.com/AzamiJs | @Azami
-
-import fs from 'fs'
-import { parsePhoneNumber } from 'libphonenumber-js'
-import fetch from 'node-fetch'
-import { xpRange } from '../lib/levelling.js'
-const { levelling } = '../lib/levelling.js'
-import PhoneNumber from 'awesome-phonenumber'
-import { promises } from 'fs'
-import { join } from 'path'
-import ct from 'countries-and-timezones'
-import moment from 'moment-timezone'
-import translate from '@vitalets/google-translate-api'
-const { generateWAMessageFromContent, proto } = (await import('@whiskeysockets/baileys')).default
-
-var handler = async (m, { conn, usedPrefix, usedPrefix: _p, __dirname, text, command }) => {
+import fetch from 'node-fetch';
+const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, isPrems}) => {
 
 try {
 
