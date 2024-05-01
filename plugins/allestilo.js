@@ -1,13 +1,33 @@
-//global.estilo = { key: {  fromMe: false, participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "5219992095479-1625305606@g.us" } : {}) }, message: { orderMessage: { itemCount : -999999, status: 1, surface : 1, message: 'Goku Bot - MD\nJostin', orderTitle: 'Bang', thumbnail: imagen6, sellerJid: '0@s.whatsapp.net'}}}
+let handler = async (m, { conn, usedPrefix, command}) => {
 
-//global.foto = 'https://telegra.ph/file/ee6da72848e646e81a1a0.jpg'
+let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
 
-//global.catalogo = [imagen1, imagen6, imagen4].getRandom()
+let reglas = `🌳 *Respeta las reglas de Goku - Bot*\n
+✰ No llamar
+✰ No hacer spam
+✰ Contacta al creador si es necesario
+✰ Pedir permiso para añadir el bot a un grupo
 
-//global.estilo = { key: {  fromMe: false, participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "5219992095479-1625305606@g.us" } : {}) }, message: { orderMessage: { itemCount : -999999, status: 1, surface : 1, message: 'Goku Bot - MD\nCreated By ', orderTitle: 'Bang', thumbnail: global.foto, sellerJid: '0@s.whatsapp.net'}}}
+🏷 𝗡𝗼𝘁𝗮: *Si no cumples con las reglas del bot, seras bloqueado.*
 
-//global.twa = {key: {participant: "0@s.whatsapp.net", remoteJid: "0@s.whatsapp.net"}, message: { groupInviteMessage: { groupJid: "51995386439-1616969743@g.us", inviteCode: "m", groupName: "P", caption: wm, jpegThumbnail: imagen1}}}
+☁️ 𝗔𝘃𝗶𝘀𝗼: *Puedes apoyarnos dejando una estrellita 🌟 al repositorio oficial de GokuBot.*
 
-//global.fake = { contextInfo: { mentionedJid: conn.parseMention(wm), forwardingScore: 1, isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: '120363167110224268@newsletter', serverMessageId: '', newsletterName: saludo, externalAdReply: { title: wm, body: packname, mediaType: 1, renderLargerThumbnail: false, previewType: `PHOTO`, thumbnailUrl: global.md, thumbnail: imagen1, sourceUrl: global.md }}}, { quoted: m } //fake con reenviado de canal
+`.trim()
+await conn.reply(m.chat, reglas, m, fkontak, )
 
-//global.estilo = { key: {  fromMe: false, participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: "5219992095479-1625305606@g.us" } : {}) }, message: {orderMessage: { itemCount : -999999, status: 1, surface : 1, message: 'Diabla - Bot', orderTitle: 'Bang', thumbnail: fs.readFileSync('./Menu.png'), sellerJid: '0@s.whatsapp.net'}}}
+}
+handler.customPrefix = /reglas|Reglas|reglasbot, botreglas|uso, usobot|uso del bot/i
+handler.command = new RegExp
+
+handler.register = true
+
+export default handler
+
+const more = String.fromCharCode(8206)
+const readMore = more.repeat(4001)
+
+function clockString(ms) {
+let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000)
+let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
+let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
+return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')}
