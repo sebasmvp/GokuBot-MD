@@ -30,6 +30,23 @@ global.igfg = '𝐉𝐨𝐬𝐭𝐢𝐧';
 global.wait = '*⏳ 𝐄𝐬𝐩𝐞𝐫𝐞 𝐔𝐧 𝐌𝐨𝐦𝐞𝐧𝐭𝐨.....*';
 global.vs = '1.0 (beta)';
 
+//• ↳ ◜𝑳𝑰𝑵𝑲𝑺◞ • 🌿
+global.gp1 = '' //Grupo Oficial De Goku
+
+global.gp2 = gp1;
+
+global.gp3 = gp1; 
+
+global.channel = '' //Canal Oficial
+
+global.channel2 = channel;
+
+global.yt = gp1;
+
+global.md = gp1;
+
+global.fb = channel2;
+
 global.imagen1 = fs.readFileSync('./Menu2.jpg');
 global.imagen2 = fs.readFileSync('./src/nuevobot.jpg');
 global.imagen3 = fs.readFileSync('./src/Pre Bot Publi.png');
