@@ -5,7 +5,7 @@ if (!args[0]) return m.reply('🌳 *Ingrese un enlace de facebook*\n\nEjemplo, !
 
 try {
 let { title, SD, HD } = await Scraper.fbdl(args[0])
-await conn.sendMessage(m.chat, { video: { url: HD || SD }, caption: `*Su Video De Facebook* 🌳` }, { quoted: m})
+await conn.sendMessage(m.chat, { video: { url: HD || SD }, caption: `*🍭 Titulo ∙* ${title}` }, { quoted: m})
 } catch {
 }}
 handler.help = ['facebook <url fb>']
