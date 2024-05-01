@@ -13,7 +13,7 @@ let reglas = `🌳 *Respeta las reglas de Goku - Bot*\n
 ☁️ 𝗔𝘃𝗶𝘀𝗼: *Puedes apoyarnos dejando una estrellita 🌟 al repositorio oficial de GokuBot.*
 
 `.trim()
-await conn.reply(m.chat, reglas, m, fkontak, )
+await conn.reply(m.chat, reglas, fkontak, )
 
 }
 handler.customPrefix = /reglas|Reglas|reglasbot, botreglas|uso, usobot|uso del bot/i
