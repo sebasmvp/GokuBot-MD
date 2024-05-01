@@ -22,7 +22,9 @@ _(Para ver el menú completo)_
 !menu2
 _(Para ver el menu audios)_`
 
-await conn.reply(m.chat, menu, m, { contextInfo: { externalAdReply: {title: '👋 ¡Hola!', body: wm, sourceUrl: global.channel, thumbnail: pp }}})
+//await conn.reply(m.chat, menu, m, { contextInfo: { externalAdReply: {title: '👋 ¡Hola!', body: wm, sourceUrl: global.channel, thumbnail: pp }}})
+
+await conn.reply(m.chat, menu, m, }}})
 
 } catch {
 conn.reply(m.chat, `*🚩 Ocurrió un fallo*`, m, )
