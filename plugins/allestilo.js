@@ -10,4 +10,4 @@
 
 //global.fake = { contextInfo: { mentionedJid: conn.parseMention(wm), forwardingScore: 1, isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: '120363167110224268@newsletter', serverMessageId: '', newsletterName: saludo, externalAdReply: { title: wm, body: packname, mediaType: 1, renderLargerThumbnail: false, previewType: `PHOTO`, thumbnailUrl: global.md, thumbnail: imagen1, sourceUrl: global.md }}}, { quoted: m } //fake con reenviado de canal
 
-global.estilo = { key: {  fromMe: false, participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: "5219992095479-1625305606@g.us" } : {}) }, message: {orderMessage: { itemCount : -999999, status: 1, surface : 1, message: 'Diabla - Bot', orderTitle: 'Bang', thumbnail: fs.readFileSync('./Menu2.jpg'), sellerJid: '0@s.whatsapp.net'}}}
+global.estilo = { key: {  fromMe: false, participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: "5219992095479-1625305606@g.us" } : {}) }, message: {orderMessage: { itemCount : -999999, status: 1, surface : 1, message: 'Diabla - Bot', orderTitle: 'Bang', thumbnail: fs.readFileSync('./Menu.png'), sellerJid: '0@s.whatsapp.net'}}}
