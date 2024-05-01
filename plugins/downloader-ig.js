@@ -3,64 +3,64 @@ import axios from 'axios';
 import instagramGetUrl from 'instagram-url-direct';
 import {instagram} from '@xct007/frieren-scraper';
 import {instagramdl} from '@bochilteam/scraper';
-import instagramDl from '@sasmeee/igdl';
-import {fileTypeFromBuffer} from 'file-type';
-
-var handler = async (m, {conn, args, command, usedPrefix}) => {
-
-if (!args[0]) return conn.reply(m.chat, `🎌 *Ingrese un enlace de instagram*\n\nEjemplo ${usedPrefix + command} https://www.instagram.com/reel/CuqAzGRAbZa/?igshid=MzRlODBiNWFlZA==`, m, )
-conn.reply(m.chat, `⏰ Espere un momento`, m, )
-
+const handler = async (m, {conn, args, command, usedPrefix}) => {
+if (!args[0]) throw `*${usedPrefix + command} https://www.instagram.com/p/CCoI4DQBGVQ/?igshid=YmMyMTA2M2Y=*`
+const { key } = await conn.sendMessage(m.chat, {text: wait}, {quoted: m});
+// await delay(1000 * 2);
+await conn.sendMessage(m.chat, {text: waitt, edit: key});
+await conn.sendMessage(m.chat, {text: waittt, edit: key});
+await conn.sendMessage(m.chat, {text: waitttt, edit: key});
 try {
-
-let apiUrll = `https://api.betabotz.org/api/download/igdowloader?url=${encodeURIComponent(args[0])}&apikey=bot-secx3`
-let responsel = await axios.get(apiUrll)
-let resultl = responsel.data
+const apiUrll = `https://api.betabotz.org/api/download/igdowloader?url=${encodeURIComponent(args[0])}&apikey=bot-secx3`;
+const responsel = await axios.get(apiUrll);
+const resultl = responsel.data;
 for (const item of resultl.message) {
-let shortUrRRl = await (await fetch(`https://tinyurl.com/api-create.php?url=${item.thumbnail}`)).text()
-let tXXxt = `🍧 *Url:* ${shortUrRRl}`.trim()
-conn.sendFile(m.chat, item._url, null, tXXxt, m, )
-await new Promise((resolve) => setTimeout(resolve, 10000))
-} 
-} catch { 
-try { 
-let datTa = await instagram.v1(args[0])
+const shortUrRRl = await (await fetch(`https://tinyurl.com/api-create.php?url=${item.thumbnail}`)).text();
+let tXXxt = `✨ *ENLACE | URL:* ${shortUrRRl}\n\n${wm}`.trim()  
+conn.sendFile(m.chat, item._url, null, tXXxt, m);
+await conn.sendMessage(m.chat, {text: waittttt, edit: key})
+await new Promise((resolve) => setTimeout(resolve, 10000));
+}} catch {    
+try {
+const datTa = await instagram.v1(args[0]);
 for (const urRRl of datTa) {
-let shortUrRRl = await (await fetch(`https://tinyurl.com/api-create.php?url=${args[0]}`)).text()
-let tXXxt = `🍧 *Url:* ${shortUrRRl}`.trim()
-conn.sendFile(m.chat, urRRl.url, 'error.mp4', tXXxt, m, )
-await new Promise((resolve) => setTimeout(resolve, 10000))
-}
+const shortUrRRl = await (await fetch(`https://tinyurl.com/api-create.php?url=${args[0]}`)).text();
+const tXXxt = `✨ *ENLACE | URL:* ${shortUrRRl}\n\n${wm}`.trim();
+conn.sendFile(m.chat, urRRl.url, 'error.mp4', tXXxt, m);
+await conn.sendMessage(m.chat, {text: waittttt, edit: key})
+await new Promise((resolve) => setTimeout(resolve, 10000));
+}} catch {
+try {
+const resultss = await instagramGetUrl(args[0]).url_list[0];
+const shortUrl2 = await (await fetch(`https://tinyurl.com/api-create.php?url=${args[0]}`)).text();
+const txt2 = `✨ *ENLACE | URL:* ${shortUrl2}\n\n${wm}`.trim();
+await conn.sendFile(m.chat, resultss, 'error.mp4', txt2, m);
+await conn.sendMessage(m.chat, {text: waittttt, edit: key})
 } catch {
 try {
-let resultss = await instagramGetUrl(args[0]).url_list[0]
-let shortUrl2 = await (await fetch(`https://tinyurl.com/api-create.php?url=${args[0]}`)).text()
-let txt2 = `🍧 *Url:* ${shortUrl2}`.trim()
-await conn.sendFile(m.chat, resultss, 'error.mp4', txt2, m)
+const resultssss = await instagramdl(args[0]);
+const shortUrl3 = await (await fetch(`https://tinyurl.com/api-create.php?url=${args[0]}`)).text();
+const txt4 = `✨ *ENLACE | URL:* ${shortUrl3}\n\n${wm}`.trim();
+for (const {url} of resultssss) await conn.sendFile(m.chat, url, 'error.mp4', txt4, m);
+await conn.sendMessage(m.chat, {text: waittttt, edit: key})
 } catch {
 try {
-let resultssss = await instagramdl(args[0])
-let shortUrl3 = await (await fetch(`https://tinyurl.com/api-create.php?url=${args[0]}`)).text()
-let txt4 = `🍧 *Url:* ${shortUrl3}`.trim()
-for (const {url} of resultssss) await conn.sendFile(m.chat, url, 'error.mp4', txt4, m)
-} catch {
-try {
-let human = await fetch(`https://api.lolhuman.xyz/api/instagram?apikey=${lolkeysapi}&url=${args[0]}`)
-let json = await human.json()
-let videoig = json.result
-let shortUrl1 = await (await fetch(`https://tinyurl.com/api-create.php?url=${args[0]}`)).text()
-let txt1 = `🍧 *Url:* ${shortUrl1}`.trim()
-await conn.sendFile(m.chat, videoig, 'error.mp4', txt1, m)
-} catch {
-return conn.reply(m.chat, '🚩 *Ocurrió un fallo*', m, )
-}}}}} 
-
-}
-handler.help = ['ig']
-handler.tags = ['descargas']
-handler.command = /^(instagramdl|instagram|igdl|ig|instagramdl2|instagram2|igdl2|ig2|instagramdl3|instagram3|igdl3|ig3)$/i
-
+const human = await fetch(`https://api.lolhuman.xyz/api/instagram?apikey=${lolkeysapi}&url=${args[0]}`);
+const json = await human.json();
+const videoig = json.result;
+const shortUrl1 = await (await fetch(`https://tinyurl.com/api-create.php?url=${args[0]}`)).text();
+const txt1 = `✨ *ENLACE | URL:* ${shortUrl1}\n\n${wm}`.trim();
+await conn.sendFile(m.chat, videoig, 'error.mp4', txt1, m);
+await conn.sendMessage(m.chat, {text: waittttt, edit: key})
+} catch (e) {
+conn.sendMessage(m.chat, {text: `#report ${usedPrefix + command}\n\n${wm}`, edit: key});
+console.log(`❗❗ ${usedPrefix + command} ❗❗`)
+console.log(e)
+handler.limit = 0
+}}}}}}
+handler.help = ['instagram <link ig>']
+handler.tags = ['downloader']
+handler.command =/^(instagram|ig(dl)?)$/i
+handler.limit = 2
 handler.register = true
-handler.limit = true
-
 export default handler
