@@ -1,49 +1,33 @@
-import ws from 'ws';
-async function handler(m, { conn: _envio, usedPrefix }) {
-  const users = [...new Set([...global.conns.filter((conn) => conn.user && conn.ws.socket && conn.ws.socket.readyState !== ws.CLOSED).map((conn) => conn)])];
-  function convertirMsADiasHorasMinutosSegundos(ms) {
-  var segundos = Math.floor(ms / 1000);
-  var minutos = Math.floor(segundos / 60);
-  var horas = Math.floor(minutos / 60);
-  var días = Math.floor(horas / 24);
+let handler = async (m, { conn, usedPrefix, command}) => {
 
-  segundos %= 60;
-  minutos %= 60;
-  horas %= 24;
+let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
 
-  var resultado = "";
-  if (días !== 0) {
-    resultado += días + " días, ";
-  }
-  if (horas !== 0) {
-    resultado += horas + " horas, ";
-  }
-  if (minutos !== 0) {
-    resultado += minutos + " minutos, ";
-  }
-  if (segundos !== 0) {
-    resultado += segundos + " segundos";
-  }
+let reglas = `🌳 *Respeta las reglas de Goku - Bot*\n
+✰ No llamar
+✰ No hacer spam
+✰ Contacta al creador si es necesario
+✰ Pedir permiso para añadir el bot a un grupo
 
-  return resultado;
+🏷 𝗡𝗼𝘁𝗮: *Si no cumples con las reglas del bot, seras bloqueado.*
+
+☁️ 𝗔𝘃𝗶𝘀𝗼: *Puedes apoyarnos dejando una estrellita 🌟 al repositorio oficial de GokuBot.*
+
+`.trim()
+await conn.reply(m.chat, reglas, m, fkontak, )
+
 }
+handler.customPrefix = /reglas|Reglas|reglasbot, botreglas|uso, usobot|uso del bot/i
+handler.command = new RegExp
 
-  const message = users.map((v, index) => `*${index + 1}.-* @${v.user.jid.replace(/[^0-9]/g, '')}\n*Link:* wa.me/${v.user.jid.replace(/[^0-9]/g, '')}?text=${usedPrefix}estado\n*Nombre:* ${v.user.name || '-'}\n*Uptime:* ${ v.uptime ? convertirMsADiasHorasMinutosSegundos(Date.now() - v.uptime) : "Desconocido"}`).join('\n\n');
-  const replyMessage = message.length === 0 ? '*—◉ No hay SubBots activos en estos momentos.*' : message;
-  const totalUsers = users.length;
-  const responseMessage = `
-*—◉ 𝘈𝘲𝘶𝘪 𝘛𝘪𝘦𝘯𝘦𝘴 𝘓𝘢 𝘓𝘪𝘴𝘵𝘢 𝘋𝘦 (𝚂𝙴𝚁𝙱𝙾𝚃/𝙹𝙰𝙳𝙸𝙱𝙾𝚃) 𝘈𝘤𝘵𝘪𝘷𝘰𝘴 🤖️*
+handler.register = true
 
-*◉ 𝘗𝘶𝘦𝘥𝘦𝘴 𝘊𝘰𝘯𝘵𝘢𝘤𝘵𝘢𝘳 𝘈𝘭 𝘊𝘳𝘦𝘢𝘥𝘰𝘳 𝘋𝘦𝘭 𝘚𝘢𝘬𝘶𝘳𝘢 𝘗𝘢𝘳𝘢 𝘝𝘦𝘳 𝘚𝘪 𝘜𝘯𝘦 𝘜𝘯 𝘉𝘰𝘵 𝘈 𝘛𝘶 𝘎𝘳𝘶𝘱𝘰, 𝘚𝘦𝘳 𝘙𝘦𝘴𝘱𝘦𝘵𝘶𝘰𝘴𝘰!!*
+export default handler
 
-*[❗] 𝘎𝘰𝘬𝘶𝘉𝘰𝘵-𝘔𝘋, 𝘊𝘢𝘥𝘢 𝘗𝘦𝘳𝘴𝘰𝘯𝘢 𝘔𝘢𝘯𝘦𝘫𝘢 𝘚𝘶 𝘉𝘰𝘵 𝘈 𝘚𝘶 𝘔𝘢𝘯𝘦𝘳𝘢 𝘌𝘭 𝘊𝘳𝘦𝘢𝘥𝘰𝘳 𝘕𝘰 𝘚𝘦 𝘈𝘴𝘦 𝘊𝘢𝘳𝘨𝘰 𝘋𝘦𝘭 𝘔𝘢𝘭 𝘜𝘴𝘰 𝘋𝘦𝘭 𝘉𝘰𝘵😆*
+const more = String.fromCharCode(8206)
+const readMore = more.repeat(4001)
 
-*—◉ 𝚂𝚄𝙱𝙱𝙾𝚃𝚂 𝙲𝙾𝙽𝙴𝙲𝚃𝙰𝙳𝙾𝚂:* ${totalUsers || '0'}
-
-${replyMessage.trim()}`.trim();
-
-  await _envio.sendMessage(m.chat, {text: responseMessage, mentions: _envio.parseMention(responseMessage)}, {quoted: m});
-}
-handler.command = handler.help = ['listjadibot', 'bots', 'subsbots'];
-handler.tags = ['jadibot'];
-export default handler;
+function clockString(ms) {
+let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000)
+let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
+let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
+return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')}
