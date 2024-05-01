@@ -1,5 +1,5 @@
 import fetch from 'node-fetch'
-import { Scraper } from '@SumiFX/Scraper'
+import Scraper from '@SumiFX/Scraper'
 
 var handler = async (m, { conn, args, command, usedPrefix, text }) => {
 
