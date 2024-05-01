@@ -11,7 +11,7 @@ const out = await webp2png(media).catch((_) => null) || Buffer.alloc(0);
 await conn.sendFile(m.chat, out, 'pp.jpg', null, m, false, { contextInfo: {externalAdReply :{ mediaUrl: null, mediaType: 1, description: null, title: wm, body: ' 💫 𝐒𝐮𝐩𝐞𝐫 𝐁𝐨𝐭 𝐃𝐞 𝐖𝐡𝐚𝐭𝐬𝐚𝐩𝐩 🥳 ', previewType: 0, thumbnail: imagen6, sourceUrl: global.channel2}}})  
 //conn.sendFile(m.chat, out, 'error.png', null, m);
 } catch (e) {
-await conn.reply(m.chat, `#report ${usedPrefix + command}\n\n${wm}` m, m)
+await conn.reply(m.chat, `#report ${usedPrefix + command}\n\n${wm}` m, )
 console.log(`❗❗ ${usedPrefix + command} ❗❗`)
 console.log(e)}}
 handler.help = ['toimg (reply)'];
