@@ -30,6 +30,30 @@ global.igfg = '𝐉𝐨𝐬𝐭𝐢𝐧';
 global.wait = '*⏳ 𝐄𝐬𝐩𝐞𝐫𝐞 𝐔𝐧 𝐌𝐨𝐦𝐞𝐧𝐭𝐨.....*';
 global.vs = '1.0 (beta)';
 
+global.imagen1 = fs.readFileSync('./Menu2.jpg');
+global.imagen2 = fs.readFileSync('./src/nuevobot.jpg');
+global.imagen3 = fs.readFileSync('./src/Pre Bot Publi.png');
+global.imagen4 = fs.readFileSync('./Menu.png');
+global.imagen5 = fs.readFileSync('./src/+18.jpg');
+global.imagen6 = fs.readFileSync('./Menu3.png');
+global.imagen7 = fs.readFileSync('./AhoraQue.png');
+global.imagen8 = fs.readFileSync('./Que.jpg');
+
+//• ↳ ◜𝑳𝑰𝑵𝑲𝑺◞ • 🌿
+global.gp1 = '' //Grupo Oficial De Goku
+
+global.gp2 = '' 
+
+global.gp3 = '' 
+
+global.channel = '' //Canal Oficial
+
+global.yt = '' //Canal De Youtube
+
+global.md = '' //Github Oficial
+
+global.fb = '' //Facebook Del Propietario
+
 //saludo user, buen dia
 var ase = new Date(); var hour = ase.getHours(); switch(hour){ case 0: hour = 'Linda Mañana'; break; case 1: hour = 'Linda Mañana'; break; case 2: hour = 'Linda Mañana'; break; case 3: hour = 'Linda Mañana'; break; case 4: hour = 'linda mañana'; break; case 5: hour = 'Linda Mañana'; break; case 6: hour = 'Linda Mañana'; break; case 7: hour = 'Linda Mañana'; break; case 8: hour = 'Linda Mañana'; break; case 9: hour = 'Linda Mañana'; break; case 10: hour = 'Lindo Dia'; break; case 11: hour = 'Lindo Dia'; break; case 12: hour = 'Lindo Dia'; break; case 13: hour = 'Lindo Dia'; break; case 14: hour = 'Linda Tarde'; break; case 15: hour = 'Linda Tarde'; break; case 16: hour = 'Linda Tarde'; break; case 17: hour = 'Linda Tarde'; break; case 18: hour = 'Linda Noche'; break; case 19: hour = 'Linda Noche'; break; case 20: hour = 'Linda Noche'; break; case 21: hour = 'Linda Noche'; break; case 22: hour = 'Linda Noche'; break; case 23: hour = 'Linda Noche'; break;}
 global.saludo = '🌹' + hour;
