@@ -6,7 +6,7 @@ var handler = async (m, { conn, text, args, usedPrefix, command}) => {
 if (!args[0]) return conn.reply(m.chat, `🎌 *Ingrese un enlace de tiktok*\n\nEjemplo, !${command} https://vm.tiktok.com/ZMYG92bUh/`, m, )
 if (!args[0].match(/tiktok/gi)) return conn.reply(m.chat, `🚩 *Verifica que el enlace sea correcto*`, m, )
 
-m.react(rwait)
+//m.react(rwait)
 
 const { key } = await conn.sendMessage(m.chat, {text: `${wait}`}, {quoted: m})
 await delay(1000 * 1)
