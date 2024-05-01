@@ -63,7 +63,7 @@ const handler = async (m, { conn, text }) => {
          spotifyi += `        ◦  *𝙰𝙻𝙱𝚄𝙼:* ${spty.data.album_name}\n`                 
          spotifyi += `        ◦  *𝙿𝚄𝙱𝙻𝙸𝙲𝙰𝙳𝙾:* ${spty.data.release_date}\n\n`   
          spotifyi += `𝙀𝙡 𝙖𝙪𝙙𝙞𝙤 𝙨𝙚 𝙚𝙨𝙩𝙖 𝙚𝙣𝙫𝙞𝙖𝙣𝙙𝙤, 𝙚𝙨𝙥𝙚𝙧𝙚 𝙪𝙣 𝙢𝙤𝙢𝙚𝙣𝙩𝙤..`
-    await conn.sendMessage(m.chat, {text: spotifyi.trim(), contextInfo: {forwardingScore: 9999999, isForwarded: true, "externalAdReply": {"showAdAttribution": true, "containsAutoReply": true, "renderLargerThumbnail": true, "title": global.titulowm2, "containsAutoReply": true, "mediaType": 1, "thumbnail": img, "thumbnailUrl": img, "mediaUrl": linkDL, "sourceUrl": linkDL}}}, {quoted: m});
+    await conn.sendMessage(m.chat, {text: spotifyi.trim(), contextInfo: {forwardingScore: 9999999, isForwarded: true, "externalAdReply": {"showAdAttribution": true, "containsAutoReply": true, "renderLargerThumbnail": true, "title": global.wm, "containsAutoReply": true, "mediaType": 1, "thumbnail": img, "thumbnailUrl": imagen6, "mediaUrl": channel, "sourceUrl": channel}}}, {quoted: m});
     await conn.sendMessage(m.chat, {audio: fs.readFileSync(`./tmp/${randomName}`), fileName: `${spty.data.name}.mp3`, mimetype: 'audio/mpeg'}, {quoted: m});
   } catch (error) {
     console.error(error);
