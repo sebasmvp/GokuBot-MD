@@ -32,12 +32,12 @@ const fload = { key : { message: `CuriosityBot-MD 🍧` + `\nJostin`, thumbnail:
 
 //m.react('🏷️')
 
-let menu = `*👋 Hola, ${user}*
+let menu = `*👋 Hola, ${}*
 
-_${formatDate}_
+_${}_
 
-*País*: ${nombreLugar} 
-*Ciudad*: ${ciudad}
+*País*: ${} 
+*Ciudad*: ${}
 
 !allmenu
 _(Para ver el menú completo)_
@@ -45,7 +45,7 @@ _(Para ver el menú completo)_
 !menu2
 _(Para ver el menu audios)_`
 
-await conn.reply(m.chat, menu, a, { contextInfo: { externalAdReply: {title: '👋 ¡Hola!', body: saludo, sourceUrl: channel, thumbnail: await (await fetch(pp)).buffer() }}})
+await conn.reply(m.chat, menu, m, { contextInfo: { externalAdReply: {title: '👋 ¡Hola!', body: saludo, sourceUrl: channel, thumbnail: imagen1 }}})
 
 } catch {
 conn.reply(m.chat, `*🚩 Ocurrió un fallo*`, m, )
