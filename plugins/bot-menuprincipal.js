@@ -550,7 +550,7 @@ await conn.sendMessage(m.chat, {text: `╭̟̩̩̩̩̩̩̩̩̩̩̩̩̩̩̩̩̩̩
 ┣'pareja' ${pareja ? `\n*»* ${name} 💕 ${conn.getName(pareja)}` : `🛐 ${lenguajeSK['smsResultPareja']()}`}
 ╰ - ̗̀↳ꕤ—— 𖤍 —— ꕤ╯*/
 
-handler.command = /^(menu|menú|comandos|menucompleto|allmenu)$/i;
+handler.command = /^(allmenu|allmenú)$/i;
 handler.exp = 50;
 handler.fail = null;
 export default handler;
