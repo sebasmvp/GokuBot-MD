@@ -35,7 +35,7 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
 ╚╼𝅄━ִ𝅄━ִ𝆺𝅥 𝆭🌳 ۫ 𝆺𝅥⋆ ִ ۫ 𝆺𝅥 ִ🌳 ۫ ⊹━ִ𝅄━ִ?
 
 ╭╼🍁 *Información* 🍁
-┃֪࣪☄️ Puedes Contactar Al Creadod
+┃֪࣪☄️ Puedes Contactar Al Creador
 ┃֪࣪☄️ Utilizando #owner
 ┃֪࣪☄️ Sea Amable.
 ╚╼𝅄━ִ𝅄━ִ𝆺𝅥 𝆭⚡️ ۫ 𝆺𝅥⋆ ִ ۫ 𝆺𝅥 ִ⚡️ ۫ ⊹━ִ𝅄━ִ?
