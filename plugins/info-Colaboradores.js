@@ -41,7 +41,7 @@ const document = doc[Math.floor(Math.random() * doc.length)];
 ┃ https://github.com/diegojadibot
 ┃
 ┃✣➸ TallyEnder:
-┃ https://github.com/Ender-GB-Isis777
+┃ https://github.com/EnderJs-CretorGL
 ┃ 
 ┃✣➸ PROXIMO:
 ┃ ..............................
