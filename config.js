@@ -11,21 +11,21 @@ global.botnumber = ""
 global.confirmCode = ""
 
 global.owner = [
-['593939005387', '👑 𝗖𝗿𝗲𝗮𝗱𝗼𝗿 ✨️', true],
-['50558124470', '𝗖𝘂𝘀𝘁𝗼𝗺𝗲𝗿 𝗦𝘂𝗽𝗽𝗼𝗿𝘁 💻', true],
-['595981477001'],
-['5491130182250', '𝗘𝗻𝘇𝗶𝘁𝗼', true]]
+['593992402778', '👑 𝗖𝗿𝗲𝗮𝗱𝗼𝗿 🔍', true],
+['593986923159', '𝗖𝘂𝘀𝘁𝗼𝗺𝗲𝗿 𝗦𝘂𝗽𝗽𝗼𝗿𝘁 💻', true],
+['593967323759'],
+['593982981749', 'Jariel', true]]
 
-global.suittag = ['593939005387'];
-global.prems = ['593939005387'];
+global.suittag = ['593992402778'];
+global.prems = ['593995004980'];
 
 global.packname = '𝙂𝙤𝙠𝙪𝘽𝙤𝙩-𝙈𝘿 💖🌻';
-global.author = '𝗝𝗼𝘀𝘁𝗶𝗻 🥀';
+global.author = 'Sebas 🔰';
 global.wm = 'Goku : Bot 🌹';
 global.sk = '𝗚oku : 𝗕𝗈𝗍';
 global.titulowm = '𝐆𝐨𝐤𝐮 - 𝐁𝐨𝐭';
-global.titulowm2 = `𝙹𝚘𝚜𝚝𝚒𝚗 𝙾𝚏𝚒𝚌𝚒𝚊𝚕`
-global.igfg = '𝐉𝐨𝐬𝐭𝐢𝐧';
+global.titulowm2 = `Sebas Oficial`
+global.igfg = 'Sebas';
 global.wait = '*⏳ 𝐄𝐬𝐩𝐞𝐫𝐞 𝐔𝐧 𝐌𝐨𝐦𝐞𝐧𝐭𝐨.....*';
 global.vs = '1.0 (beta)';
 
@@ -71,7 +71,7 @@ global.tiempo = d.toLocaleString('en-US', {hour: 'numeric', minute: 'numeric', s
 global.wm2 = `${dia} ${fecha}\nGokuBot`;
 global.gt = 'GokuBot';
 global.mysticbot = 'GokuBot';
-global.mysticbot = 'https://github.com/Jostin207';
+global.mysticbot = 'https://github.com/sebasmvp';
 global.waitt = '*⏳ 𝐄𝐬𝐩𝐞𝐫𝐞 𝐔𝐧 𝐌𝐨𝐦𝐞𝐧𝐭𝐨...*';
 global.waittt = '*⏳ 𝐄𝐬𝐩𝐞𝐫𝐞 𝐔𝐧 𝐌𝐨𝐦𝐞𝐧𝐭𝐨 ...*';
 global.waitttt = '*⏳ 𝐄𝐬𝐩𝐞𝐫𝐞 𝐔𝐧 𝐌𝐨𝐦𝐞𝐧𝐭𝐨 ...*';
@@ -90,8 +90,8 @@ global.htki = '*⭑•̩̩͙⊱•••• ☪*';
 global.htka = '*☪ ••••̩̩͙⊰•⭑*';
 global.comienzo = '• • ◕◕════';
 global.fin = '════◕◕ • •';
-global.botdate = `*📅 Fecha:*  ${moment.tz('America/Mexico_City').format('DD/MM/YY')}`;
-global.bottime = `*⏰️ Hora:* ${moment.tz('America/Mexico_City').format('HH:mm:ss')}`;
+global.botdate = `*📅 Fecha:*  ${moment.tz('America/Guayaquill').format('DD/MM/YY')}`;
+global.bottime = `*⏰️ Hora:* ${moment.tz('America/Guayaquill').format('HH:mm:ss')}`;
 global.fgif = {key: {participant: '0@s.whatsapp.net'}, message: {'videoMessage': {'title': wm, 'h': `Hmm`, 'seconds': '999999999', 'gifPlayback': 'true', 'caption': bottime, 'jpegThumbnail': fs.readFileSync('./Menu.png')}}};
 global.multiplier = 99;
 global.flaaa = [
