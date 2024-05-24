@@ -8,13 +8,7 @@
 
 
 - ### ©️ Configuracion
- Clonar Repo : GokuBot [Aqui.](https://github.com/Jostin/GokuBot-MD-/fork)
-
-  
-- ### 🧸Instalar Por Render🧩
-
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://dashboard.render.com/blueprint/new?repo=https%3A%2F%2Fgithub.com%2Jostin207%2FGokuBot-MD-) 
-
+ Clonar Repo : GokuBot [Aqui.](https://sebasmvp/GokuBot-MD/fork)
 
 - #### Instalacion Por Termux Automatica🧸
 
@@ -25,7 +19,7 @@ termux-setup-storage
 ```
 
 ```bash
-apt update -y && yes | apt upgrade && pkg install -y bash wget mpv && wget -O - https://raw.githubusercontent.com/Jostin207/GokuBot-MD-/master/goku.sh | bash
+apt update -y && yes | apt upgrade && pkg install -y bash wget mpv && wget -O - https://raw.githubusercontent.com/sebasmvp/GokuBot-MD/master/goku.sh | bash
 ```
 
 - #### Instalacion Por Termux Manual👨‍💻
@@ -44,7 +38,7 @@ pkg install -y git nodejs ffmpeg imagemagick && pkg install yarn
 ```
 
 ```bash
-git clone https://github.com/Jostin207/GokuBot-MD-.git && cd GokuBot-MD-
+git clone https://github.com/sebasmvp/GokuBot-MD.git && cd GokuBot-MD
 ```
 
 ```bash
@@ -68,14 +62,14 @@ npm start
 ```bash
 ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 > cd 
-> cd GokuBot-MD-
+> cd GokuBot-MD
 > npm start
 ```
 
 - ### Obtener Otro Codigo Qr👨‍💻 
 ```bash
 > ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
-> cd GokuBot-MD-
+> cd GokuBot-MD
 > rm -rf sessions
 > npm start
 ```
@@ -83,14 +77,14 @@ ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 - ### 📍Actualizar GokuBot 🟢
 > Note Comandos para actualizar GokuBot-MD- de forma automática
 ```bash
-grep -q 'bash\|wget' <(dpkg -l) || apt install -y bash wget && wget -O - https://raw.githubusercontent.com/Jostin207/GokuBot-MD-/master/update.sh | bash
+grep -q 'bash\|wget' <(dpkg -l) || apt install -y bash wget && wget -O - https://raw.githubusercontent.com/sebasmvp/GokuBot-MD/master/update.sh | bash
 ```
 Para que no pierda su progreso en GokuBot, estos comandos realizarán un respaldo de su `database.json` y se agregará a la versión más reciente.
 
 
 ### Editor Y Propietario Del Bot 
 <a
-href="https://github.com/Jostin207"><img src="https://github.com/Jostin207.png" width="200" height="200" alt="Jostin"/></a>
+href="https://github.com/sebasmvp"><img src="https://github.com/sebasmvp.png" width="200" height="200" alt="Jostin"/></a>
 
 ## Colaboradores Del Bot  
-[![Creador](https://github.com/Jostin207.png?size=100)](https://github.com/Jostin207) [![Diego](https://github.com/Diego-YL-177.png?size=100)](https://github.com/Diego-YL-177) [![Ender](https://github.com/EnderJs-CreatorGL.png?size=100)](https://github.com/EnderJs-CreatorGL) [![Zam](https://github.com/AzamiJs.png?size=100)](https://github.com/AzamiJs) [![Mario](https://github.com/elrebelde21.png?size=100)](https://github.com/elrebelde21) [![Eder](https://github.com/WOTCHITO.png?size=100)](https://github.com/WOTCHITO)
+[![Creador](https://github.com/sebasmvp.png?size=100)](https://github.com/sebasmvp) 
